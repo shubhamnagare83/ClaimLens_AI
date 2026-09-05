@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM005
+Policy Number: POL-2026-005
+
+Policyholder Details:
+Name: Priya Joshi
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle Registration: MH31EV9269
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 2026-03-30
+Incident Time: 07:30
+Location: Market area main chowk, Thane
+
+Description:
+On the day of the incident, I was driving my car near Market area main chowk in Thane. Another vehicle collided with mine, causing damage to the Left fender, Roof panel.
+
+Claim Date: 2026-04-03
+
+Declaration: I, Priya Joshi, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Priya Joshi
+Date: 2026-04-03

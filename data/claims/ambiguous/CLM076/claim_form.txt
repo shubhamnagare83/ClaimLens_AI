@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM076
+Policy Number: POL-2026-076
+
+Policyholder Details:
+Name: Ramesh Malhotra
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle Registration: MH15TD9125
+
+Incident Details:
+Type of Incident: Theft
+Date of Incident: 2026-04-30
+Incident Time: 16:15
+Location: College Road T-junction, Latur
+
+Description:
+The accident happened sometime around 16:00 or maybe a bit later, I'm not exactly sure of the precise time. It was on College Road T-junction in Latur. My vehicle MH15TD9125 was damaged.
+
+Claim Date: 2026-05-04
+
+Declaration: I, Ramesh Malhotra, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Ramesh Malhotra
+Date: 2026-05-04

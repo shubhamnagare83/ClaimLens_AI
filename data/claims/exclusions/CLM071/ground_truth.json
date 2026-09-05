@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLM071",
+  "expected_outcome": "REJECT",
+  "expected_contradictions": [],
+  "expected_missing_documents": [],
+  "expected_policy_clauses": [
+    "POL-001"
+  ],
+  "expected_blocking_conditions": [
+    "policy_expired"
+  ],
+  "scenario_type": "EXCLUSION",
+  "difficulty": "Hard"
+}

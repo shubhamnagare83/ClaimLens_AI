@@ -1,0 +1,16 @@
+.env
+*.key
+__pycache__/
+.venv/
+venv/
+*.pyc
+*.pyo
+database/*.db*
+data/embeddings/*.npy
+data/embeddings/*.json
+.DS_Store
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.uix/

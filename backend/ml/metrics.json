@@ -1,0 +1,112 @@
+{
+  "model_name": "LightGBM Gradient Boosted Decision Trees",
+  "dataset": "Kaggle imtkaggleteam/vehicle-insurance-data",
+  "total_records": 508499,
+  "sample_trained": 150000,
+  "test_records": 30000,
+  "accuracy": 91.38,
+  "roc_auc": 0.743,
+  "precision": 33.76,
+  "recall": 3.19,
+  "f1_score": 5.83,
+  "confusion_matrix": {
+    "true_negatives": 27334,
+    "false_positives": 157,
+    "false_negatives": 2429,
+    "true_positives": 80
+  },
+  "feature_importances": [
+    {
+      "feature": "PREMIUM",
+      "importance": 850,
+      "pct": 17.7
+    },
+    {
+      "feature": "CCM_TON",
+      "importance": 660,
+      "pct": 13.8
+    },
+    {
+      "feature": "PREMIUM_RATIO",
+      "importance": 653,
+      "pct": 13.6
+    },
+    {
+      "feature": "VEHICLE_AGE",
+      "importance": 590,
+      "pct": 12.3
+    },
+    {
+      "feature": "INSURED_VALUE",
+      "importance": 548,
+      "pct": 11.4
+    },
+    {
+      "feature": "CARRYING_CAPACITY",
+      "importance": 511,
+      "pct": 10.7
+    },
+    {
+      "feature": "SEATS_NUM",
+      "importance": 393,
+      "pct": 8.2
+    },
+    {
+      "feature": "USAGE",
+      "importance": 259,
+      "pct": 5.4
+    },
+    {
+      "feature": "TYPE_VEHICLE",
+      "importance": 216,
+      "pct": 4.5
+    },
+    {
+      "feature": "IDV_LOG",
+      "importance": 113,
+      "pct": 2.4
+    }
+  ],
+  "features_used": [
+    "INSURED_VALUE",
+    "PREMIUM",
+    "VEHICLE_AGE",
+    "SEATS_NUM",
+    "CARRYING_CAPACITY",
+    "CCM_TON",
+    "PREMIUM_RATIO",
+    "IDV_LOG",
+    "TYPE_VEHICLE",
+    "USAGE"
+  ],
+  "categories": {
+    "type_vehicle": [
+      "Automobile",
+      "Bus",
+      "Motor-cycle",
+      "Pick-up",
+      "Special construction",
+      "Station Wagones",
+      "Tanker",
+      "Tractor",
+      "Trailers and semitrailers",
+      "Truck"
+    ],
+    "usage": [
+      "Agricultural Any Farm",
+      "Agricultural Own Farm",
+      "Ambulance",
+      "Car Hires",
+      "Fare Paying Passengers",
+      "Fire fighting",
+      "General Cartage",
+      "Learnes",
+      "Others",
+      "Own Goods",
+      "Own service",
+      "Private",
+      "Special Construction",
+      "Taxi"
+    ]
+  }
+}

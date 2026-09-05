@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLM070",
+  "expected_outcome": "ESCALATE",
+  "expected_contradictions": [],
+  "expected_missing_documents": [],
+  "expected_policy_clauses": [
+    "POL-006",
+    "POL-033",
+    "POL-034"
+  ],
+  "expected_blocking_conditions": [],
+  "scenario_type": "AMBIGUOUS",
+  "difficulty": "Hard"
+}

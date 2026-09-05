@@ -1,0 +1,21 @@
+REPAIR ESTIMATE
+========================================
+
+Vehicle No.: MH31UB4440
+Vehicle: KTM Duke 200
+Date of Assessment: 12 Apr 2026
+
+Estimated Repair Cost:
+------------------------------
+  Seat cover: Rs. 12,000
+  Handle bar: Rs. 30,000
+  Brake lever: Rs. 12,000
+  Front fork: Rs. 8,000
+  Headlight assembly: Rs. 10,000
+------------------------------
+  Total Estimate: Rs. 72,000
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 12 Apr 2026

@@ -1,0 +1,12 @@
+{
+  "exclusions": [
+    {"clause_id": "POL-009", "trigger": "invalid_licence", "description": "Driver did not hold valid licence"},
+    {"clause_id": "POL-010", "trigger": "alcohol_involvement", "description": "Driver under influence of alcohol"},
+    {"clause_id": "POL-011", "trigger": "intentional_damage", "description": "Damage caused intentionally"},
+    {"clause_id": "POL-012", "trigger": "wear_and_tear", "description": "Normal wear and tear"},
+    {"clause_id": "POL-013", "trigger": "mechanical_breakdown", "description": "Mechanical or electrical breakdown"},
+    {"clause_id": "POL-032", "trigger": "misrepresentation", "description": "False or misleading information"},
+    {"clause_id": "POL-036", "trigger": "commercial_use", "description": "Private vehicle used commercially"},
+    {"clause_id": "POL-038", "trigger": "unauthorized_modification", "description": "Unauthorized vehicle modifications"}
+  ]
+}

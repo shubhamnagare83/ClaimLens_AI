@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM066
+Policy Number: POL-2026-066
+
+Policyholder Details:
+Name: Hemant Mishra
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle Registration: MH31WT8233
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 17 August 2026
+Incident Time: 21:45
+Location: Municipal garden road, Solapur
+
+Description:
+The accident happened sometime around 21:00 or maybe a bit later, I'm not exactly sure of the precise time. It was on Municipal garden road in Solapur. My vehicle MH31WT8233 was damaged.
+
+Claim Date: 20 August 2026
+
+Declaration: I, Hemant Mishra, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Hemant Mishra
+Date: 20 August 2026

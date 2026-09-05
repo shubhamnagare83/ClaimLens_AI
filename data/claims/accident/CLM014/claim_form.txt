@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM014
+Policy Number: POL-2026-014
+
+Policyholder Details:
+Name: Dhruv Rao
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration Number: MH20EF1465
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 22 June 2026
+Approx. Time: 16:45
+Location: Temple Road curve, Mumbai
+
+Description:
+On the day of the incident, I was driving my car near Temple Road curve in Mumbai. Another vehicle collided with mine, causing damage to the Tail light, Windshield.
+
+Claim Date: 27 June 2026
+
+Declaration: I, Dhruv Rao, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Dhruv Rao
+Date: 27 June 2026

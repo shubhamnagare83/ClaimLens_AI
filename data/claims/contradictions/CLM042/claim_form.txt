@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM042
+Policy Number: POL-2026-042
+
+Policyholder Details:
+Name: Tushar Chavan
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Vehicle Registration: MH31TS1890
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 10-04-2026
+Incident Time: 07:15
+Location: Old city area narrow lane, Jalgaon
+
+Description:
+On the day of the incident, I was driving my two-wheeler near Old city area narrow lane in Jalgaon. Another vehicle collided with mine, causing damage to the Chain sprocket, Headlight assembly.
+
+Claim Date: 11-04-2026
+
+Declaration: I, Tushar Chavan, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Tushar Chavan
+Date: 11-04-2026

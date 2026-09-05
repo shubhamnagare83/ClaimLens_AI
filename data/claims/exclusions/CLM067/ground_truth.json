@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLM067",
+  "expected_outcome": "REJECT",
+  "expected_contradictions": [],
+  "expected_missing_documents": [],
+  "expected_policy_clauses": [
+    "POL-010"
+  ],
+  "expected_blocking_conditions": [
+    "alcohol_involvement"
+  ],
+  "scenario_type": "EXCLUSION",
+  "difficulty": "Hard"
+}

@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM048
+Policy Number: POL-2026-048
+
+Policyholder Details:
+Name: Shubham Gore
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration: MH15XB1647
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 2026-05-08
+Incident Time: 13:15
+Location: Ring Road near petrol pump, Latur
+
+Description:
+On the day of the incident, I was driving my car near Ring Road near petrol pump in Latur. Another vehicle collided with mine, causing damage to the Bonnet, Rear bumper.
+
+Claim Date: 2026-05-12
+
+Declaration: I, Shubham Gore, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Shubham Gore
+Date: 2026-05-12

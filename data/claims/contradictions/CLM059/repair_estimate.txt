@@ -1,0 +1,18 @@
+REPAIR ESTIMATE
+========================================
+
+Vehicle No.: MH01CG6929
+Vehicle: Skoda Slavia
+Date of Assessment: 2026-03-01
+
+Estimated Repair Cost:
+------------------------------
+  Side mirror: Rs. 25,000
+  Radiator grille: Rs. 8,000
+------------------------------
+  Total Estimate: Rs. 33,000
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 2026-03-01

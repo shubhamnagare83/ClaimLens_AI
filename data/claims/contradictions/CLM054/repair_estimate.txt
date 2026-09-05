@@ -1,0 +1,21 @@
+REPAIR ESTIMATE
+========================================
+
+Registration: MH31SC4117
+Vehicle: Hyundai i20
+Date of Assessment: 01-07-2026
+
+Estimated Repair Cost:
+------------------------------
+  Rear bumper: Rs. 35,000
+  Boot lid: Rs. 35,000
+  Windshield: Rs. 35,000
+  Radiator grille: Rs. 8,000
+  Headlight: Rs. 15,000
+------------------------------
+  Total Estimate: Rs. 128,000
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 01-07-2026

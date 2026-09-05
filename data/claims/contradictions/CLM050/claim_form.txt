@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM050
+Policy Number: POL-2026-050
+
+Policyholder Details:
+Name: Vivek Mehta
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Regn. No.: MH05FC8536
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 2026-04-19
+Time of Incident: 22:45
+Location: Municipal garden road, Sangli
+
+Description:
+On the day of the incident, I was driving my two-wheeler near Municipal garden road in Sangli. Another vehicle collided with mine, causing damage to the Front fairing, Fuel tank.
+
+Claim Date: 2026-04-21
+
+Declaration: I, Vivek Mehta, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Vivek Mehta
+Date: 2026-04-21

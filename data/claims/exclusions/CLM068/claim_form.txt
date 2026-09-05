@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM068
+Policy Number: POL-2026-068
+
+Policyholder Details:
+Name: Dinesh Pillai
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Registration Number: MH31UB4440
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 2026-04-11
+Incident Time: 14:45
+Location: Lake Road sharp bend, Aurangabad
+
+Description:
+On the day of the incident, I was driving my two-wheeler near Lake Road sharp bend in Aurangabad. Another vehicle collided with mine, causing damage to the Seat cover, Handle bar.
+
+Claim Date: 2026-04-12
+
+Declaration: I, Dinesh Pillai, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Dinesh Pillai
+Date: 2026-04-12

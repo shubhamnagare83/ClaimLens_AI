@@ -1,0 +1,14 @@
+{
+  "accident": {
+    "mandatory": ["claim_form", "incident_description", "repair_estimate"],
+    "conditional": {
+      "fir": "Required when third party is involved or for significant damage",
+      "driving_license": "May be requested during investigation",
+      "vehicle_rc": "May be requested for ownership verification"
+    }
+  },
+  "theft": {
+    "mandatory": ["claim_form", "incident_description", "fir", "vehicle_rc", "key_declaration"],
+    "conditional": {}
+  }
+}

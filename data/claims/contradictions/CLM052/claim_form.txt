@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM052
+Policy Number: POL-2026-052
+
+Policyholder Details:
+Name: Manoj Kulkarni
+
+Vehicle Details:
+Vehicle Type: Private Car
+Reg. No.: MH05NH6824
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 02/03/2026
+Approx. Time: 06:30
+Location: MG Road near signal, Thane
+
+Description:
+On the day of the incident, I was driving my car near MG Road near signal in Thane. Another vehicle collided with mine, causing damage to the Front bumper, Radiator grille.
+
+Claim Date: 03/03/2026
+
+Declaration: I, Manoj Kulkarni, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Manoj Kulkarni
+Date: 03/03/2026

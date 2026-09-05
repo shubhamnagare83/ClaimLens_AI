@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM009
+Policy Number: POL-2026-009
+
+Policyholder Details:
+Name: Meera Nair
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle No.: MH05DD6739
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 2026-07-06
+Incident Time: 14:45
+Location: Cantonment area main gate road, Pune
+
+Description:
+On the day of the incident, I was driving my car near Cantonment area main gate road in Pune. Another vehicle collided with mine, causing damage to the Left door, Right fender.
+
+Claim Date: 2026-07-11
+
+Declaration: I, Meera Nair, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Meera Nair
+Date: 2026-07-11

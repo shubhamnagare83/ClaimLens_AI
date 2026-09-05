@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM069
+Policy Number: POL-2026-069
+
+Policyholder Details:
+Name: Revathi Kumar
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration: MH31JZ9009
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 17 May 2026
+Approx. Time: 16:45
+Location: Municipal garden road, Aurangabad
+
+Description:
+Major accident on 17/05/2026 involving my vehicle MH31JZ9009 at Municipal garden road, Aurangabad. The vehicle sustained extensive damage.
+
+Claim Date: 18 May 2026
+
+Declaration: I, Revathi Kumar, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Revathi Kumar
+Date: 18 May 2026

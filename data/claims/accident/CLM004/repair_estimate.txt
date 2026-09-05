@@ -1,0 +1,21 @@
+REPAIR ESTIMATE
+========================================
+
+Reg. No.: MH15FP8850
+Vehicle: Honda City
+Date of Assessment: 2026-06-17
+
+Estimated Repair Cost:
+------------------------------
+  Headlight: Rs. 25,000
+  Right fender: Rs. 35,000
+  Front bumper: Rs. 30,000
+  Rear bumper: Rs. 8,000
+  Roof panel: Rs. 35,000
+------------------------------
+  Total Estimate: Rs. 133,000
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 2026-06-17

@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM029",
+  "expected_outcome": "REQUEST_INFORMATION",
+  "expected_contradictions": [],
+  "expected_missing_documents": [
+    "vehicle_rc"
+  ],
+  "expected_policy_clauses": [
+    "POL-007",
+    "POL-006"
+  ],
+  "expected_blocking_conditions": [],
+  "scenario_type": "MISSING_DOCUMENT",
+  "difficulty": "Medium"
+}

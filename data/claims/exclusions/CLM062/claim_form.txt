@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM062
+Policy Number: POL-2026-062
+
+Policyholder Details:
+Name: Pankaj Singh
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Registration: MH01SE4508
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 18-07-2026
+Incident Time: 21:45
+Location: Temple Road curve, Solapur
+
+Description:
+On the day of the incident, I was driving my two-wheeler near Temple Road curve in Solapur. Another vehicle collided with mine, causing damage to the Handle bar, Chain sprocket.
+
+Claim Date: 19-07-2026
+
+Declaration: I, Pankaj Singh, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Pankaj Singh
+Date: 19-07-2026

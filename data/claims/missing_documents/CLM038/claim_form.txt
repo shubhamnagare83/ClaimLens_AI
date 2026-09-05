@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM038
+Policy Number: POL-2026-038
+
+Policyholder Details:
+Name: Suresh Kale
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle Registration: MH12SK5349
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 08 April 2026
+Time: 20:45
+Location: MG Road near signal, Solapur
+
+Description:
+On the day of the incident, I was driving my car near MG Road near signal in Solapur. Another vehicle collided with mine, causing damage to the Side mirror, Boot lid.
+
+Claim Date: 13 April 2026
+
+Declaration: I, Suresh Kale, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Suresh Kale
+Date: 13 April 2026

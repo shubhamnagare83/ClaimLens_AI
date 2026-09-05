@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM019
+Policy Number: POL-2026-019
+
+Policyholder Details:
+Name: Tanvi Kumar
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Registration: MH15EA8875
+
+Incident Details:
+Type of Incident: Theft
+Date of Incident: 2026-08-15
+Time: 08:30
+Location: Bypass road bridge section, Dhule
+
+Description:
+I parked my two-wheeler at Bypass road bridge section in Dhule. When I returned, the vehicle was missing from the parking spot.
+
+Claim Date: 2026-08-18
+
+Declaration: I, Tanvi Kumar, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Tanvi Kumar
+Date: 2026-08-18

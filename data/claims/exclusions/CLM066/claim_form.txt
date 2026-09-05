@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM066
+Policy Number: POL-2026-066
+
+Policyholder Details:
+Name: Hemant Mishra
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration Number: MH03SE3738
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 23-05-2026
+Time of Incident: 22:15
+Location: Station Road intersection, Mumbai
+
+Description:
+On the day of the incident, I was driving my car near Station Road intersection in Mumbai. Another vehicle collided with mine, causing damage to the Left door, Windshield.
+
+Claim Date: 27-05-2026
+
+Declaration: I, Hemant Mishra, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Hemant Mishra
+Date: 27-05-2026

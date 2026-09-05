@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM046
+Policy Number: POL-2026-046
+
+Policyholder Details:
+Name: Omkar Khare
+
+Vehicle Details:
+Vehicle Type: Private Car
+Reg. No.: MH05QN2693
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 15/05/2026
+Incident Time: 08:15
+Location: Lake Road sharp bend, Amravati
+
+Description:
+On the day of the incident, I was driving my car near Lake Road sharp bend in Amravati. Another vehicle collided with mine, causing damage to the Bonnet, Radiator grille.
+
+Claim Date: 16/05/2026
+
+Declaration: I, Omkar Khare, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Omkar Khare
+Date: 16/05/2026

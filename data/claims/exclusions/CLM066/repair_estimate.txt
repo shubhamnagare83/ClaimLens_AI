@@ -1,0 +1,19 @@
+REPAIR ESTIMATE
+========================================
+
+Registration Number: MH03SE3738
+Vehicle: Toyota Innova
+Date of Assessment: 24/05/2026
+
+Estimated Repair Cost:
+------------------------------
+  Left door: Rs. 15,000
+  Windshield: Rs. 10,000
+  Bonnet: Rs. 25,000
+------------------------------
+  Total Estimate: Rs. 50,000
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 24/05/2026

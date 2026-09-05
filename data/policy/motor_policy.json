@@ -1,0 +1,351 @@
+{
+  "policy_id": "CMSP-2026",
+  "policy_name": "ClaimLens Motor Secure Policy",
+  "version": "2026.1",
+  "effective_date": "2026-01-01",
+  "issuer": "ClaimLens Insurance Ltd.",
+  "clauses": [
+    {
+      "clause_id": "POL-001",
+      "title": "Policy Validity",
+      "category": "eligibility",
+      "rule": "Coverage applies only when the incident occurs during the active policy period. The policy start date and end date define the coverage window. Any incident occurring before the policy start date or after the policy end date is not covered.",
+      "conditions": ["Incident date must fall within policy start and end dates"],
+      "exceptions": [],
+      "required_evidence": ["policy_dates", "incident_date"]
+    },
+    {
+      "clause_id": "POL-002",
+      "title": "Own Damage Coverage",
+      "category": "coverage",
+      "rule": "Own damage coverage provides compensation for damage to the insured vehicle caused by accidents, collisions, overturning, fire, explosion, natural calamities, or malicious acts by third parties. The claim amount is subject to the Insured Declared Value (IDV) and applicable deductibles.",
+      "conditions": ["Vehicle must be insured under own damage cover", "Damage must result from a covered peril"],
+      "exceptions": ["Wear and tear", "Mechanical breakdown", "Consequential loss"],
+      "required_evidence": ["claim_form", "repair_estimate", "incident_description"]
+    },
+    {
+      "clause_id": "POL-003",
+      "title": "Theft Coverage",
+      "category": "coverage",
+      "rule": "Theft coverage provides compensation for the loss of the insured vehicle due to theft or attempted theft. The insured must file a First Information Report (FIR) with the police within 24 hours of discovering the theft. Coverage is limited to the Insured Declared Value (IDV) at the time of theft.",
+      "conditions": ["Vehicle must be insured under comprehensive cover", "FIR must be filed", "Theft must be reported to insurer within claim window"],
+      "exceptions": ["Theft by family members", "Theft due to negligence in securing vehicle keys"],
+      "required_evidence": ["claim_form", "fir", "vehicle_rc", "key_declaration"]
+    },
+    {
+      "clause_id": "POL-004",
+      "title": "Accident Coverage",
+      "category": "coverage",
+      "rule": "Accident coverage compensates for damage to the insured vehicle resulting from road accidents, collisions with other vehicles, objects, or animals, and single-vehicle accidents such as overturning. The policyholder must provide a completed claim form, incident description, and repair estimate.",
+      "conditions": ["Accident must involve the insured vehicle", "Vehicle must be driven by an authorized driver"],
+      "exceptions": ["Racing or speed testing", "Use beyond geographical limits"],
+      "required_evidence": ["claim_form", "incident_description", "repair_estimate"]
+    },
+    {
+      "clause_id": "POL-005",
+      "title": "Claim Notification Window",
+      "category": "claim_window",
+      "rule": "Claims should normally be reported to the insurer within 7 calendar days of the incident date. The claim date is the date the insurer receives the claim notification. Reasonable delay may be considered when supported by evidence such as hospitalization, remote location, or other justifiable circumstances.",
+      "conditions": ["Claim date minus incident date should not exceed 7 days"],
+      "exceptions": ["Hospitalization of policyholder", "Natural disaster preventing communication", "Remote location with no connectivity"],
+      "required_evidence": ["claim_date", "incident_date"]
+    },
+    {
+      "clause_id": "POL-006",
+      "title": "Required Claim Documents",
+      "category": "documentation",
+      "rule": "Every claim submission must include a duly completed claim form. Additional documents are required based on the type of claim. For accident claims: incident description and repair estimate. For theft claims: FIR, vehicle registration certificate, and key declaration. Incomplete submissions may result in the claim being held pending additional documentation.",
+      "conditions": ["All mandatory documents for claim type must be submitted"],
+      "exceptions": ["Documents may be submitted in phases if prior approval is obtained"],
+      "required_evidence": ["claim_form"]
+    },
+    {
+      "clause_id": "POL-007",
+      "title": "Vehicle Registration Requirement",
+      "category": "eligibility",
+      "rule": "The insured vehicle must have a valid registration certificate (RC) issued by the Regional Transport Office. The registration number on the policy must match the vehicle registration number on all submitted documents.",
+      "conditions": ["Valid RC must exist", "Registration number must match across all documents"],
+      "exceptions": [],
+      "required_evidence": ["vehicle_rc", "vehicle_registration"]
+    },
+    {
+      "clause_id": "POL-008",
+      "title": "Valid Driving Licence",
+      "category": "eligibility",
+      "rule": "At the time of an accident, the insured vehicle must be driven by a person holding a valid and effective driving licence appropriate for the type of vehicle. A car requires a Light Motor Vehicle (LMV) licence. A two-wheeler requires a two-wheeler licence or LMV licence.",
+      "conditions": ["Driver must hold valid licence", "Licence type must match vehicle type"],
+      "exceptions": [],
+      "required_evidence": ["driving_license"]
+    },
+    {
+      "clause_id": "POL-009",
+      "title": "Driving Licence Exclusion",
+      "category": "exclusion",
+      "rule": "No coverage is provided if the vehicle was being driven by a person not holding a valid and effective driving licence at the time of the incident, or if the licence had expired, or if the licence type did not match the vehicle category.",
+      "conditions": ["Licence must be valid at incident date", "Licence type must match vehicle"],
+      "exceptions": [],
+      "required_evidence": ["driving_license", "incident_date"]
+    },
+    {
+      "clause_id": "POL-010",
+      "title": "Alcohol and Substance Exclusion",
+      "category": "exclusion",
+      "rule": "No coverage is provided if the driver of the insured vehicle was under the influence of alcohol or any intoxicating substance at the time of the incident. Evidence of alcohol or substance involvement from police reports, medical records, or witness statements will trigger this exclusion.",
+      "conditions": ["Driver must not be under influence of alcohol or drugs"],
+      "exceptions": [],
+      "required_evidence": ["fir", "incident_description"]
+    },
+    {
+      "clause_id": "POL-011",
+      "title": "Intentional Damage Exclusion",
+      "category": "exclusion",
+      "rule": "No coverage is provided for loss or damage caused intentionally by the insured or by any person acting with the knowledge or consent of the insured. Self-inflicted damage or staged accidents are excluded from coverage.",
+      "conditions": ["Damage must not be intentional"],
+      "exceptions": [],
+      "required_evidence": ["incident_description", "fir"]
+    },
+    {
+      "clause_id": "POL-012",
+      "title": "Wear and Tear Exclusion",
+      "category": "exclusion",
+      "rule": "No coverage is provided for damage resulting from normal wear and tear, gradual deterioration, rust, corrosion, or aging of the vehicle or its parts. Only sudden and accidental damage is covered.",
+      "conditions": ["Damage must be sudden and accidental"],
+      "exceptions": [],
+      "required_evidence": ["repair_estimate", "incident_description"]
+    },
+    {
+      "clause_id": "POL-013",
+      "title": "Mechanical or Electrical Breakdown",
+      "category": "exclusion",
+      "rule": "No coverage is provided for loss or damage due to mechanical or electrical breakdown, failure, or breakage. This includes engine seizure, gearbox failure, electrical system malfunction, and similar issues unless directly caused by an accident.",
+      "conditions": ["Breakdown must be caused by a covered accident"],
+      "exceptions": ["Mechanical failure directly caused by an insured accident"],
+      "required_evidence": ["repair_estimate", "incident_description"]
+    },
+    {
+      "clause_id": "POL-014",
+      "title": "Insured Declared Value (IDV)",
+      "category": "valuation",
+      "rule": "The Insured Declared Value (IDV) represents the maximum sum insured for the vehicle and is the upper limit of the insurer's liability. The total claim amount including repairs, parts, and labor cannot exceed the IDV. If the repair estimate exceeds the IDV, the claim is limited to the IDV amount minus the applicable deductible.",
+      "conditions": ["Claim amount must not exceed IDV"],
+      "exceptions": [],
+      "required_evidence": ["idv", "repair_estimate"]
+    },
+    {
+      "clause_id": "POL-015",
+      "title": "Deductible",
+      "category": "valuation",
+      "rule": "A compulsory deductible is applicable to every claim. The deductible amount is borne by the policyholder and is deducted from the claim amount. For cars, the compulsory deductible is Rs. 2,000. For two-wheelers, the compulsory deductible is Rs. 1,000. Any voluntary deductible chosen at the time of policy purchase is applied in addition to the compulsory deductible.",
+      "conditions": ["Deductible must be applied to every claim"],
+      "exceptions": [],
+      "required_evidence": ["vehicle_type", "deductible"]
+    },
+    {
+      "clause_id": "POL-016",
+      "title": "Theft FIR Requirement",
+      "category": "documentation",
+      "rule": "For theft claims, a First Information Report (FIR) filed with the local police is mandatory. The FIR must be filed within 24 hours of discovering the theft. The FIR must contain the vehicle registration number, date and time of theft, and location of theft. Claims without an FIR will not be processed.",
+      "conditions": ["FIR must be filed for theft claims", "FIR must be filed within 24 hours of discovery"],
+      "exceptions": [],
+      "required_evidence": ["fir"]
+    },
+    {
+      "clause_id": "POL-017",
+      "title": "Theft Key Requirement",
+      "category": "documentation",
+      "rule": "For theft claims, the policyholder must submit all sets of vehicle keys to the insurer along with a signed key declaration stating the total number of keys provided at the time of purchase and the number of keys in possession at the time of theft. Failure to account for all keys may impact claim processing.",
+      "conditions": ["All vehicle keys must be surrendered", "Key declaration must be submitted"],
+      "exceptions": ["Key lost before theft with evidence of separate key-loss report"],
+      "required_evidence": ["key_declaration"]
+    },
+    {
+      "clause_id": "POL-018",
+      "title": "Repair Estimate Requirement",
+      "category": "documentation",
+      "rule": "For accident and own damage claims, a detailed repair estimate from an authorized workshop or surveyor is required. The estimate must itemize parts, labor, and painting costs separately. The estimate must reference the vehicle registration number.",
+      "conditions": ["Repair estimate must be submitted for damage claims", "Estimate must be itemized"],
+      "exceptions": ["Total loss claims assessed by surveyor"],
+      "required_evidence": ["repair_estimate"]
+    },
+    {
+      "clause_id": "POL-019",
+      "title": "Repair Invoice Requirement",
+      "category": "documentation",
+      "rule": "After repairs are completed, the policyholder must submit the final repair invoice for reimbursement. The invoice amount may differ from the initial estimate. The actual reimbursement is based on the invoice amount subject to IDV and deductible limits.",
+      "conditions": ["Invoice must be submitted for final settlement"],
+      "exceptions": ["Cashless claims settled directly with the workshop"],
+      "required_evidence": ["repair_invoice"]
+    },
+    {
+      "clause_id": "POL-020",
+      "title": "Vehicle Ownership Verification",
+      "category": "eligibility",
+      "rule": "The claimant must be the registered owner of the insured vehicle or an authorized representative. The name on the policy must match the name on the vehicle registration certificate. Claims by non-owners will not be entertained.",
+      "conditions": ["Claimant must be registered owner", "Name must match on policy and RC"],
+      "exceptions": ["Authorized representative with power of attorney"],
+      "required_evidence": ["vehicle_rc", "claim_form"]
+    },
+    {
+      "clause_id": "POL-021",
+      "title": "Policy Transfer",
+      "category": "eligibility",
+      "rule": "If the vehicle has been transferred to a new owner, the insurance policy must also be transferred within 14 days of the vehicle transfer. Claims made by a new owner without policy transfer will not be covered.",
+      "conditions": ["Policy must be in the claimant's name"],
+      "exceptions": [],
+      "required_evidence": ["policy_number", "vehicle_rc"]
+    },
+    {
+      "clause_id": "POL-022",
+      "title": "Geographic Coverage",
+      "category": "coverage",
+      "rule": "The policy provides coverage within the geographical boundaries of India. Incidents occurring outside India are not covered unless specifically endorsed.",
+      "conditions": ["Incident must occur within India"],
+      "exceptions": ["Specific geographical extension endorsement"],
+      "required_evidence": ["incident_location"]
+    },
+    {
+      "clause_id": "POL-023",
+      "title": "Accident Evidence Requirements",
+      "category": "documentation",
+      "rule": "For accident claims, the policyholder must provide a detailed description of the accident including date, time, location, circumstances, and parties involved. Photographic evidence of damage is recommended. For third-party involvement, police acknowledgement or FIR may be required.",
+      "conditions": ["Accident details must be documented"],
+      "exceptions": [],
+      "required_evidence": ["incident_description", "claim_form"]
+    },
+    {
+      "clause_id": "POL-024",
+      "title": "Theft Reporting Requirements",
+      "category": "documentation",
+      "rule": "Theft must be reported to the police immediately and to the insurer within the claim notification window. The policyholder must provide full cooperation during the investigation. The insurer reserves the right to conduct an independent investigation.",
+      "conditions": ["Theft must be reported to police", "Must be reported to insurer within claim window"],
+      "exceptions": [],
+      "required_evidence": ["fir", "claim_form"]
+    },
+    {
+      "clause_id": "POL-025",
+      "title": "Police Acknowledgement",
+      "category": "documentation",
+      "rule": "For incidents involving third parties, significant property damage, or injuries, a police report or acknowledgement may be required. The police report must be consistent with the claim form and incident description.",
+      "conditions": ["Police report required for significant incidents"],
+      "exceptions": ["Minor single-vehicle incidents with no injuries"],
+      "required_evidence": ["fir"]
+    },
+    {
+      "clause_id": "POL-026",
+      "title": "Total Loss Assessment",
+      "category": "valuation",
+      "rule": "If the cost of repair exceeds 75% of the IDV, the vehicle may be declared a total loss. In case of total loss, the settlement is based on the IDV minus the deductible and the salvage value of the vehicle.",
+      "conditions": ["Repair cost exceeds 75% of IDV"],
+      "exceptions": [],
+      "required_evidence": ["repair_estimate", "idv"]
+    },
+    {
+      "clause_id": "POL-027",
+      "title": "Partial Loss Assessment",
+      "category": "valuation",
+      "rule": "For partial loss claims, the insurer will pay the cost of repair or replacement of damaged parts subject to depreciation, deductible, and IDV limits. The policyholder must use authorized repair facilities when directed.",
+      "conditions": ["Repair cost is within IDV limits"],
+      "exceptions": [],
+      "required_evidence": ["repair_estimate", "idv"]
+    },
+    {
+      "clause_id": "POL-028",
+      "title": "Salvage Rights",
+      "category": "valuation",
+      "rule": "In case of total loss or theft recovery, the insurer has the right to take possession of the salvage. The policyholder must cooperate in transferring the salvage to the insurer.",
+      "conditions": ["Applicable in total loss or recovered theft"],
+      "exceptions": [],
+      "required_evidence": []
+    },
+    {
+      "clause_id": "POL-029",
+      "title": "Depreciation Schedule",
+      "category": "valuation",
+      "rule": "Depreciation is applied to replaced parts based on the age of the vehicle. Rubber, nylon, plastic parts: 50% depreciation. Fiberglass components: 30% depreciation. Glass items: nil depreciation. Metal body parts: age-based depreciation as per schedule. Paint: 50% depreciation.",
+      "conditions": ["Depreciation applies to all replaced parts"],
+      "exceptions": ["Glass items are exempt from depreciation"],
+      "required_evidence": ["repair_estimate", "vehicle_age"]
+    },
+    {
+      "clause_id": "POL-030",
+      "title": "Reasonable Delay Exception",
+      "category": "claim_window",
+      "rule": "If the claim is reported beyond the standard 7-day window, the insurer may still consider the claim if the policyholder provides reasonable justification for the delay. Valid reasons include hospitalization, natural disaster, or being in a remote area without communication access. The delay reason must be documented and supported by evidence.",
+      "conditions": ["Delay reason must be documented", "Supporting evidence must be provided"],
+      "exceptions": [],
+      "required_evidence": ["delay_justification"]
+    },
+    {
+      "clause_id": "POL-031",
+      "title": "Claim Investigation Rights",
+      "category": "process",
+      "rule": "The insurer reserves the right to investigate any claim through appointed surveyors, investigators, or assessors. The policyholder must cooperate fully with the investigation and provide access to the vehicle and all related documents.",
+      "conditions": ["Policyholder must cooperate with investigation"],
+      "exceptions": [],
+      "required_evidence": []
+    },
+    {
+      "clause_id": "POL-032",
+      "title": "Misrepresentation",
+      "category": "exclusion",
+      "rule": "If any claim is found to be based on misrepresentation, non-disclosure of material facts, or fraudulent documentation, the insurer reserves the right to deny the claim and void the policy. Material misrepresentation includes incorrect vehicle details, false incident reports, or fabricated documents.",
+      "conditions": ["All information must be truthful and accurate"],
+      "exceptions": [],
+      "required_evidence": ["all_documents"]
+    },
+    {
+      "clause_id": "POL-033",
+      "title": "Documentation Accuracy",
+      "category": "documentation",
+      "rule": "All submitted documents must be consistent with each other and with the facts of the incident. Material inconsistencies between documents such as different dates, locations, or vehicle details may require clarification or investigation before the claim can be processed.",
+      "conditions": ["Documents must be internally consistent"],
+      "exceptions": ["Minor formatting differences are acceptable"],
+      "required_evidence": ["all_documents"]
+    },
+    {
+      "clause_id": "POL-034",
+      "title": "Human Review Requirement",
+      "category": "process",
+      "rule": "All claim recommendations generated by automated systems are advisory in nature. Final claim decisions must be made by an authorized human investigator. No claim shall be automatically approved or rejected without human review.",
+      "conditions": ["Human review required for all decisions"],
+      "exceptions": [],
+      "required_evidence": []
+    },
+    {
+      "clause_id": "POL-035",
+      "title": "Dispute Resolution",
+      "category": "process",
+      "rule": "In case of dispute regarding claim assessment, the policyholder may request a re-evaluation. Disputes should be raised within 30 days of receiving the claim decision. An independent surveyor may be appointed for re-assessment.",
+      "conditions": ["Dispute must be raised within 30 days"],
+      "exceptions": [],
+      "required_evidence": []
+    },
+    {
+      "clause_id": "POL-036",
+      "title": "Commercial Use Exclusion",
+      "category": "exclusion",
+      "rule": "If the insured vehicle is registered as a private vehicle but was being used for commercial purposes at the time of the incident, coverage may be denied. Commercial use includes ride-sharing, goods transport, or rental services without appropriate endorsement.",
+      "conditions": ["Vehicle must be used as per registered purpose"],
+      "exceptions": ["Commercial use endorsement on policy"],
+      "required_evidence": ["incident_description", "vehicle_rc"]
+    },
+    {
+      "clause_id": "POL-037",
+      "title": "Multiple Claims",
+      "category": "process",
+      "rule": "If the policyholder has filed multiple claims during the same policy period, each claim is assessed independently. However, the cumulative claim amount across all claims cannot exceed the IDV. Previous claim history may be considered during assessment.",
+      "conditions": ["Cumulative claims must not exceed IDV"],
+      "exceptions": [],
+      "required_evidence": ["claim_history"]
+    },
+    {
+      "clause_id": "POL-038",
+      "title": "Modification Exclusion",
+      "category": "exclusion",
+      "rule": "Damage to or caused by unauthorized modifications, alterations, or additions to the vehicle that are not declared in the policy are excluded from coverage. This includes aftermarket parts, engine modifications, and structural changes.",
+      "conditions": ["Vehicle must be in original or declared configuration"],
+      "exceptions": ["Modifications declared and endorsed in the policy"],
+      "required_evidence": ["repair_estimate", "vehicle_rc"]
+    }
+  ]
+}

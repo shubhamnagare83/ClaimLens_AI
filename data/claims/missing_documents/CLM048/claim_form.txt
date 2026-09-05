@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM048
+Policy Number: POL-2026-048
+
+Policyholder Details:
+Name: Shubham Gore
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle No.: MH46VK3938
+
+Incident Details:
+Type of Incident: Theft
+Date of Incident: 2026-06-29
+Time of Incident: 23:45
+Location: Lake Road sharp bend, Jalgaon
+
+Description:
+I parked my car at Lake Road sharp bend in Jalgaon. When I returned, the vehicle was missing from the parking spot.
+
+Claim Date: 2026-07-02
+
+Declaration: I, Shubham Gore, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Shubham Gore
+Date: 2026-07-02

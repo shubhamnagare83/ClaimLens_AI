@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM001
+Policy Number: POL-2026-001
+
+Policyholder Details:
+Name: Neha Patil
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration Number: MH12SS2681
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 20-07-2026
+Time: 09:45
+Location: Lake Road sharp bend, Akola
+
+Description:
+On the day of the incident, I was driving my car near Lake Road sharp bend in Akola. Another vehicle collided with mine, causing damage to the Roof panel, Radiator grille.
+
+Claim Date: 25-07-2026
+
+Declaration: I, Neha Patil, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Neha Patil
+Date: 25-07-2026

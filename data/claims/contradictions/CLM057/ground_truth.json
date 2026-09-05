@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM057",
+  "expected_outcome": "ESCALATE",
+  "expected_contradictions": [
+    "incident_location"
+  ],
+  "expected_missing_documents": [],
+  "expected_policy_clauses": [
+    "POL-022",
+    "POL-033"
+  ],
+  "expected_blocking_conditions": [],
+  "scenario_type": "CONTRADICTION",
+  "difficulty": "Hard"
+}

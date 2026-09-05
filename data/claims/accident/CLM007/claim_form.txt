@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM007
+Policy Number: POL-2026-007
+
+Policyholder Details:
+Name: Ananya Gupta
+
+Vehicle Details:
+Vehicle Type: Private Car
+Reg. No.: MH05QR7811
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 05 July 2026
+Incident Time: 09:15
+Location: Flyover entry ramp, Satara
+
+Description:
+On the day of the incident, I was driving my car near Flyover entry ramp in Satara. Another vehicle collided with mine, causing damage to the Windshield, Roof panel.
+
+Claim Date: 07 July 2026
+
+Declaration: I, Ananya Gupta, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Ananya Gupta
+Date: 07 July 2026

@@ -1,0 +1,20 @@
+REPAIR ESTIMATE
+========================================
+
+Registration: MH15WW3407
+Vehicle: Honda City
+Date of Assessment: 2026-05-12
+
+Estimated Repair Cost:
+------------------------------
+  Side mirror: Rs. 10,000
+  Right fender: Rs. 12,000
+  Windshield: Rs. 18,000
+  Left door: Rs. 10,000
+------------------------------
+  Total Estimate: Rs. 50,000
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 2026-05-12

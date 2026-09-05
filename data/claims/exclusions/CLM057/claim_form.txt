@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM057
+Policy Number: POL-2026-057
+
+Policyholder Details:
+Name: Geeta Gupta
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Registration: MH31FA9642
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 07 June 2026
+Incident Time: 17:00
+Location: Market area main chowk, Aurangabad
+
+Description:
+On the day of the incident, I was driving my two-wheeler near Market area main chowk in Aurangabad. Another vehicle collided with mine, causing damage to the Footrest, Handle bar.
+
+Claim Date: 10 June 2026
+
+Declaration: I, Geeta Gupta, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Geeta Gupta
+Date: 10 June 2026

@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM047
+Policy Number: POL-2026-047
+
+Policyholder Details:
+Name: Jyoti Sathe
+
+Vehicle Details:
+Vehicle Type: Private Car
+Reg No: MH20PX6477
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 14-09-2026
+Incident Time: 14:30
+Location: Temple Road curve, Pune
+
+Description:
+On the day of the incident, I was driving my car near Temple Road curve in Pune. Another vehicle collided with mine, causing damage to the Radiator grille, Right door.
+
+Claim Date: 16-09-2026
+
+Declaration: I, Jyoti Sathe, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Jyoti Sathe
+Date: 16-09-2026

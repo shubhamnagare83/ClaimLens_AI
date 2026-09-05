@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM041",
+  "expected_outcome": "REQUEST_INFORMATION",
+  "expected_contradictions": [],
+  "expected_missing_documents": [
+    "repair_estimate"
+  ],
+  "expected_policy_clauses": [
+    "POL-018",
+    "POL-006"
+  ],
+  "expected_blocking_conditions": [],
+  "scenario_type": "MISSING_DOCUMENT",
+  "difficulty": "Medium"
+}

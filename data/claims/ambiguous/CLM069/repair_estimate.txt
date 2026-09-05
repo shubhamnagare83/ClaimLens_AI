@@ -1,0 +1,21 @@
+REPAIR ESTIMATE
+========================================
+
+Reg No: MH31JZ9009
+Vehicle: Tata Nexon
+Date of Assessment: 18 May 2026
+
+Estimated Repair Cost:
+------------------------------
+  Left door: Rs. 71,950
+  Windshield: Rs. 66,489
+  Tail light: Rs. 54,231
+  Right fender: Rs. 59,446
+  Rear bumper: Rs. 61,381
+------------------------------
+  Total Estimate: Rs. 313,497
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 18 May 2026

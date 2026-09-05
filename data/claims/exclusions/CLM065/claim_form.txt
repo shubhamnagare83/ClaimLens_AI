@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM065
+Policy Number: POL-2026-065
+
+Policyholder Details:
+Name: Padma Das
+
+Vehicle Details:
+Vehicle Type: Private Car
+Regn. No.: MH05KN5999
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 29/04/2027
+Incident Time: 18:30
+Location: Service road near mall, Dhule
+
+Description:
+On the day of the incident, I was driving my car near Service road near mall in Dhule. Another vehicle collided with mine, causing damage to the Windshield, Tail light.
+
+Claim Date: 01/05/2027
+
+Declaration: I, Padma Das, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Padma Das
+Date: 01/05/2027

@@ -1,0 +1,16 @@
+{
+  "claim_id": "CLM012",
+  "expected_outcome": "APPROVE",
+  "expected_contradictions": [],
+  "expected_missing_documents": [],
+  "expected_policy_clauses": [
+    "POL-001",
+    "POL-004",
+    "POL-005",
+    "POL-014",
+    "POL-015"
+  ],
+  "expected_blocking_conditions": [],
+  "scenario_type": "CLEAN",
+  "difficulty": "Easy"
+}

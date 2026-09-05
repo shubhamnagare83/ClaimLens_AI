@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM024
+Policy Number: POL-2026-024
+
+Policyholder Details:
+Name: Karan Ghosh
+
+Vehicle Details:
+Vehicle Type: Private Car
+Reg No: MH02ET4646
+
+Incident Details:
+Type of Incident: Theft
+Date of Incident: 2026-07-11
+Time: 22:00
+Location: Highway NH-48 km marker 120, Chandrapur
+
+Description:
+I parked my car at Highway NH-48 km marker 120 in Chandrapur. When I returned, the vehicle was missing from the parking spot.
+
+Claim Date: 2026-07-15
+
+Declaration: I, Karan Ghosh, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Karan Ghosh
+Date: 2026-07-15

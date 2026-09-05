@@ -1,0 +1,24 @@
+{
+  "accident": {
+    "own_damage": {
+      "description": "Damage to insured vehicle from accidents, collisions, overturning",
+      "applicable_clauses": ["POL-001", "POL-002", "POL-004", "POL-005", "POL-006", "POL-008", "POL-014", "POL-015", "POL-018", "POL-023", "POL-029"],
+      "required_documents": ["claim_form", "incident_description", "repair_estimate"],
+      "optional_documents": ["fir", "driving_license", "vehicle_rc", "repair_invoice"]
+    },
+    "third_party": {
+      "description": "Damage involving third-party vehicles or property",
+      "applicable_clauses": ["POL-001", "POL-004", "POL-005", "POL-006", "POL-008", "POL-014", "POL-015", "POL-018", "POL-025"],
+      "required_documents": ["claim_form", "incident_description", "repair_estimate", "fir"],
+      "optional_documents": ["driving_license", "vehicle_rc"]
+    }
+  },
+  "theft": {
+    "total_theft": {
+      "description": "Complete theft of insured vehicle",
+      "applicable_clauses": ["POL-001", "POL-003", "POL-005", "POL-006", "POL-007", "POL-014", "POL-016", "POL-017", "POL-020", "POL-024"],
+      "required_documents": ["claim_form", "incident_description", "fir", "vehicle_rc", "key_declaration"],
+      "optional_documents": []
+    }
+  }
+}

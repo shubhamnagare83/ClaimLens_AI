@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM011
+Policy Number: POL-2026-011
+
+Policyholder Details:
+Name: Kavya Iyer
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle No.: MH01AJ9866
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 17 Jul 2026
+Time: 22:30
+Location: Market area main chowk, Satara
+
+Description:
+On the day of the incident, I was driving my car near Market area main chowk in Satara. Another vehicle collided with mine, causing damage to the Quarter panel, Headlight.
+
+Claim Date: 20 Jul 2026
+
+Declaration: I, Kavya Iyer, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Kavya Iyer
+Date: 20 Jul 2026

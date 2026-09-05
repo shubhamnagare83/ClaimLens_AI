@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM070
+Policy Number: POL-2026-070
+
+Policyholder Details:
+Name: Sandip Chopra
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration: MH31PM9735
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 31 May 2026
+Time: 08:30
+Location: IT Park access road, Mumbai
+
+Description:
+On the day of the incident, I was driving my car near IT Park access road in Mumbai. Another vehicle collided with mine, causing damage to the Rear bumper, Bonnet.
+
+Claim Date: 01 June 2026
+
+Declaration: I, Sandip Chopra, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Sandip Chopra
+Date: 01 June 2026

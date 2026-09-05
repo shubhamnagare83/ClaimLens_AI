@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM002
+Policy Number: POL-2026-002
+
+Policyholder Details:
+Name: Rohan Kulkarni
+
+Vehicle Details:
+Vehicle Type: Private Car
+Regn. No.: MH03WY6062
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 08/05/2026
+Time of Incident: 21:00
+Location: Lake Road sharp bend, Dhule
+
+Description:
+On the day of the incident, I was driving my car near Lake Road sharp bend in Dhule. Another vehicle collided with mine, causing damage to the Quarter panel, Rear bumper.
+
+Claim Date: 11/05/2026
+
+Declaration: I, Rohan Kulkarni, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Rohan Kulkarni
+Date: 11/05/2026

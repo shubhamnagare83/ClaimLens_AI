@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM023
+Policy Number: POL-2026-023
+
+Policyholder Details:
+Name: Shreya Deshpande
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Vehicle Registration: MH46QT8893
+
+Incident Details:
+Type of Incident: Theft
+Date of Incident: 2026-04-06
+Time: 06:15
+Location: Station Road intersection, Nagpur
+
+Description:
+I parked my two-wheeler at Station Road intersection in Nagpur. When I returned, the vehicle was missing from the parking spot.
+
+Claim Date: 2026-04-08
+
+Declaration: I, Shreya Deshpande, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Shreya Deshpande
+Date: 2026-04-08

@@ -1,0 +1,21 @@
+REPAIR ESTIMATE
+========================================
+
+Vehicle No.: MH31EV9269
+Vehicle: Kia Seltos
+Date of Assessment: 31-03-2026
+
+Estimated Repair Cost:
+------------------------------
+  Left fender: Rs. 20,000
+  Roof panel: Rs. 5,000
+  Headlight: Rs. 8,000
+  Windshield: Rs. 20,000
+  Tail light: Rs. 8,000
+------------------------------
+  Total Estimate: Rs. 61,000
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 31-03-2026

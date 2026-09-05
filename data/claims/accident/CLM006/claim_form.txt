@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM006
+Policy Number: POL-2026-006
+
+Policyholder Details:
+Name: Arjun Sharma
+
+Vehicle Details:
+Vehicle Type: Private Car
+Reg. No.: MH14VL8517
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 15 Jun 2026
+Time of Incident: 21:00
+Location: Cantonment area main gate road, Akola
+
+Description:
+On the day of the incident, I was driving my car near Cantonment area main gate road in Akola. Another vehicle collided with mine, causing damage to the Front bumper, Right door.
+
+Claim Date: 16 Jun 2026
+
+Declaration: I, Arjun Sharma, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Arjun Sharma
+Date: 16 Jun 2026

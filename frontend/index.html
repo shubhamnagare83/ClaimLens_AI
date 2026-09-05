@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaimLens AI — Evidence-first Motor Insurance Investigation</title>
+    <meta name="description" content="PS02 Insurance Claims Evidence Review Assistant — AI-powered motor insurance claim investigation with evidence grounding, contradiction detection, and human-in-the-loop decisions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <!-- Brand -->
+            <div class="sidebar-brand">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="url(#grad)" stroke-width="2.5" fill="none"/>
+                        <path d="M10 16.5L14 20.5L22 12.5" stroke="url(#grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs><linearGradient id="grad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#0891b2"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="brand-title">ClaimLens AI</h1>
+                    <p class="brand-subtitle">Motor Claims Intelligence</p>
+                </div>
+            </div>
+
+            <!-- Search Box (by Name, Vehicle No, Claim ID, Policy) -->
+            <div class="sidebar-search">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="sidebar-search-input" placeholder="Search name, vehicle no, claim..." oninput="handleSearch(this.value)" autocomplete="off">
+                    <button id="search-clear-btn" class="search-clear-btn" onclick="clearSearch()" style="display:none;" title="Clear search">×</button>
+                </div>
+                <div id="search-match-badge" class="search-match-badge" style="display:none;"></div>
+            </div>
+
+            <!-- Main Navigation -->
+            <div class="sidebar-section-title">MAIN NAVIGATION</div>
+            <nav class="sidebar-nav">
+                <button class="nav-item active" id="nav-dashboard" onclick="switchNav('dashboard')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-item" id="nav-claims" onclick="switchNav('claims')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>Claims</span>
+                    <span class="nav-badge" id="nav-claims-count">0</span>
+                </button>
+                <button class="nav-item" id="nav-insights" onclick="switchNav('insights')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Insights</span>
+                </button>
+                <button class="nav-item" id="nav-ml" onclick="switchNav('ml')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                    <span>ML Risk Engine</span>
+                    <span class="nav-badge" style="background:#10b981; color:#ffffff; font-weight:700;">91.4%</span>
+                </button>
+                <button class="nav-item" id="nav-doc-studio" onclick="switchNav('doc-studio')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>PDF AI Studio</span>
+                    <span class="nav-badge" style="background:#4f46e5; color:#ffffff; font-weight:700;">NEW</span>
+                </button>
+                <button class="nav-item" id="nav-assistant" onclick="switchNav('assistant')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path>
+                        <path d="m4.93 10.93 1.41 1.41"></path>
+                        <path d="M2 18h2"></path>
+                        <path d="M20 18h2"></path>
+                        <path d="m19.07 10.93-1.41 1.41"></path>
+                        <path d="M22 22H2"></path>
+                        <path d="m8 22 1-6h6l1 6"></path>
+                        <circle cx="12" cy="13" r="5"></circle>
+                    </svg>
+                    <span>Claim AI Assistant</span>
+                    <span class="nav-badge" style="background:linear-gradient(135deg, #6366f1, #8b5cf6); color:#ffffff; font-weight:700;">COPILOT</span>
+                </button>
+            </nav>
+
+
+            <!-- Quick Filters -->
+            <div class="sidebar-section-title">QUICK FILTERS</div>
+            <div class="sidebar-filters">
+                <button class="filter-link active" data-filter="all" onclick="applyQuickFilter('all')">
+                    <span class="filter-dot all"></span>
+                    <span class="filter-text">All Claims</span>
+                    <span class="filter-count" id="count-all">0</span>
+                </button>
+                <button class="filter-link" data-filter="Accident" onclick="applyQuickFilter('Accident')">
+                    <span class="filter-dot accident"></span>
+                    <span class="filter-text">Accidents</span>
+                    <span class="filter-count" id="count-accident">0</span>
+                </button>
+                <button class="filter-link" data-filter="Theft" onclick="applyQuickFilter('Theft')">
+                    <span class="filter-dot theft"></span>
+                    <span class="filter-text">Thefts</span>
+                    <span class="filter-count" id="count-theft">0</span>
+                </button>
+                <button class="filter-link" data-filter="PENDING" onclick="applyQuickFilter('PENDING')">
+                    <span class="filter-dot pending"></span>
+                    <span class="filter-text">Pending Review</span>
+                    <span class="filter-count" id="count-pending">0</span>
+                </button>
+                <button class="filter-link" data-filter="ESCALATE" onclick="applyQuickFilter('ESCALATE')">
+                    <span class="filter-dot escalate"></span>
+                    <span class="filter-text">Escalations</span>
+                    <span class="filter-count" id="count-escalate">0</span>
+                </button>
+                <button class="filter-link" data-filter="REQUEST_INFORMATION" onclick="applyQuickFilter('REQUEST_INFORMATION')">
+                    <span class="filter-dot request"></span>
+                    <span class="filter-text">Needs Info</span>
+                    <span class="filter-count" id="count-request">0</span>
+                </button>
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <div id="gemini-status" class="status-badge loading">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Checking AI...</span>
+                </div>
+                <div class="track-badge">TRACK PS02 • MOTOR CLAIMS</div>
+            </div>
+        </aside>
+
+        <!-- App Body -->
+        <div class="app-body">
+            <!-- Top Nav -->
+            <header class="top-nav">
+                <div class="top-nav-left">
+                    <button class="mobile-menu-btn" onclick="toggleSidebar()" aria-label="Toggle Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div>
+                        <h2 class="view-title" id="view-title">Dashboard Overview</h2>
+                        <p class="view-subtitle" id="view-subtitle">Monitor claims, evidence scores, and investigation queues</p>
+                    </div>
+                </div>
+                <div class="top-nav-right">
+                    <button class="btn btn-primary" onclick="openNewClaimModal()" id="btn-new-claim" title="Create a new insurance claim case">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        New Case
+                    </button>
+                    <div class="demo-dropdown">
+                        <button class="btn btn-secondary" onclick="toggleDemoMenu()" id="btn-demo">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            Load Demo Scenario
+                        </button>
+                        <div class="dropdown-menu" id="demo-menu">
+                            <button onclick="loadDemo('clean_accident')">Clean Accident (CLM001)</button>
+                            <button onclick="loadDemo('missing_documents')">Missing Documents (CLM047)</button>
+                            <button onclick="loadDemo('contradictory_evidence')">Contradictory Evidence (CLM051)</button>
+                            <button onclick="loadDemo('policy_exclusion')">Policy Exclusion (CLM056)</button>
+                            <button onclick="loadDemo('clean_theft')">Clean Theft (CLM021)</button>
+                            <button onclick="loadDemo('difficult_theft')">Difficult Theft (CLM075)</button>
+                            <button onclick="loadDemo('ambiguous')">Ambiguous Incident (CLM068)</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Container -->
+            <main class="main-content">
+                <!-- VIEW 1: DASHBOARD -->
+                <section id="view-dashboard" class="view active">
+                    <!-- Banner Carousel (Auto-rotates every 3 seconds) -->
+                    <div class="banner-carousel-wrapper" id="banner-carousel-wrapper" onmouseenter="pauseBannerCarousel()" onmouseleave="resumeBannerCarousel()">
+                        <div class="banner-progress-bar" id="banner-progress-bar"></div>
+                        <div class="banner-carousel-container" id="banner-carousel-container">
+                            <!-- Slide 1 -->
+                            <div class="banner-slide active">
+                                <img src="/banners/banner_1.jpg" alt="AI Investigation Workspace">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <div class="banner-tag"><span>🔍</span> Evidence Triangulation</div>
+                                        <h2 class="banner-title">AI-Powered Motor Claims Investigation</h2>
+                                        <p class="banner-desc">Cross-references claim forms, police FIRs, and repair estimates against policy rules to uncover discrepancies and enforce exclusions automatically.</p>
+                                        <div class="banner-actions">
+                                            <button class="banner-btn-primary" onclick="openNewClaimModal()">+ File New Claim</button>
+                                            <button class="banner-btn-outline" onclick="loadDemo('clean_accident')">Try Accident Demo →</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="banner-slide">
+                                <img src="/banners/banner_2.jpg" alt="Accident Scene Reconstruction">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <div class="banner-tag"><span>🚗</span> Scene Reconstruction</div>
+                                        <h2 class="banner-title">Accident Impact & Damage Validation</h2>
+                                        <p class="banner-desc">Validates collision damage against FIR incident timelines, verifying 48-hour intimation rules and detecting inconsistent impact points.</p>
+                                        <div class="banner-actions">
+                                            <button class="banner-btn-primary" onclick="loadDemo('contradictory_evidence')">Inspect Discrepancies (CLM051)</button>
+                                            <button class="banner-btn-outline" onclick="switchNav('claims')">Browse Claims →</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="banner-slide">
+                                <img src="/banners/banner_3.jpg" alt="Garage Repair Auditing">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <div class="banner-tag"><span>🔧</span> Garage Estimator Audit</div>
+                                        <h2 class="banner-title">Parts Depreciation & Labor Tariff Auditing</h2>
+                                        <p class="banner-desc">Cross-examines workshop repair estimates against standard insurance schedule tables (50% plastic/rubber, 30% fiber, age-scaled metal).</p>
+                                        <div class="banner-actions">
+                                            <button class="banner-btn-primary" onclick="loadDemo('missing_documents')">Test Missing Docs (CLM047)</button>
+                                            <button class="banner-btn-outline" onclick="switchNav('insights')">View Policy Clauses →</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="banner-slide">
+                                <img src="/banners/banner_4.jpg" alt="Kaggle ML Risk Model">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <div class="banner-tag"><span>⚡</span> 91.4% Accuracy ML Model</div>
+                                        <h2 class="banner-title">Trained on 508,499 Vehicle Insurance Records</h2>
+                                        <p class="banner-desc">Real-world LightGBM Gradient Boosted model identifies high-risk claims, over-invoicing, and anomaly distributions in real-time.</p>
+                                        <div class="banner-actions">
+                                            <button class="banner-btn-primary" onclick="switchNav('ml')">Explore ML Risk Engine</button>
+                                            <button class="banner-btn-outline" onclick="switchNav('insights')">View Model Metrics →</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="banner-slide">
+                                <img src="/banners/banner_5.jpg" alt="Stolen Vehicle FIR Validation">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <div class="banner-tag"><span>🏍️</span> Total Loss & Theft</div>
+                                        <h2 class="banner-title">Stolen Vehicle & FIR Police Validation</h2>
+                                        <p class="banner-desc">Requires mandatory police non-traceable certification, FIR within 24h, and dual-key handoff before approving full IDV indemnification.</p>
+                                        <div class="banner-actions">
+                                            <button class="banner-btn-primary" onclick="loadDemo('difficult_theft')">Test Theft Scenario (CLM075)</button>
+                                            <button class="banner-btn-outline" onclick="loadDemo('clean_theft')">Clean Theft (CLM021) →</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="banner-slide">
+                                <img src="/banners/banner_6.jpg" alt="Team Claims Review">
+                                <div class="banner-overlay">
+                                    <div class="banner-content">
+                                        <div class="banner-tag"><span>👥</span> Human-in-the-Loop</div>
+                                        <h2 class="banner-title">Collaborative Investigator Review & Audit Trail</h2>
+                                        <p class="banner-desc">Every AI recommendation includes source document citations, interactive decision counterfactuals, and immutable audit logging.</p>
+                                        <div class="banner-actions">
+                                            <button class="banner-btn-primary" onclick="switchNav('claims')">View Claim Queue</button>
+                                            <button class="banner-btn-outline" onclick="openNewClaimModal()">+ Create Case</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Controls -->
+                        <button class="banner-nav-btn banner-nav-prev" onclick="prevBannerSlide()" aria-label="Previous Slide">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button class="banner-nav-btn banner-nav-next" onclick="nextBannerSlide()" aria-label="Next Slide">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+
+                        <!-- Indicator Dots -->
+                        <div class="banner-indicators" id="banner-indicators">
+                            <button class="banner-dot active" onclick="goToBannerSlide(0)"></button>
+                            <button class="banner-dot" onclick="goToBannerSlide(1)"></button>
+                            <button class="banner-dot" onclick="goToBannerSlide(2)"></button>
+                            <button class="banner-dot" onclick="goToBannerSlide(3)"></button>
+                            <button class="banner-dot" onclick="goToBannerSlide(4)"></button>
+                            <button class="banner-dot" onclick="goToBannerSlide(5)"></button>
+                        </div>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="stats-grid" id="stats-grid"></div>
+
+                    <!-- Quick Charts Grid -->
+                    <div class="charts-grid">
+                        <div class="chart-card">
+                            <div class="card-header-flex">
+                                <h3>Claim Outcomes Breakdown</h3>
+                                <span class="card-badge">Status</span>
+                            </div>
+                            <canvas id="chart-outcomes"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <div class="card-header-flex">
+                                <h3>Claims by Incident Type</h3>
+                                <span class="card-badge">Incidents</span>
+                            </div>
+                            <canvas id="chart-types"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Recent / High Priority Claims Section -->
+                    <div class="dashboard-section-header">
+                        <div>
+                            <h3 class="section-title">Priority Investigation Queue</h3>
+                            <p class="section-desc">Claims requiring investigator attention or immediate evidence review</p>
+                        </div>
+                        <button class="btn btn-sm btn-ghost" onclick="switchNav('claims')">View All Claims →</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="claims-table">
+                            <thead>
+                                <tr>
+                                    <th>Claim ID</th>
+                                    <th>Customer</th>
+                                    <th>Vehicle</th>
+                                    <th>Type</th>
+                                    <th>Incident Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="priority-claims-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- VIEW 2: CLAIMS -->
+                <section id="view-claims" class="view" style="display:none;">
+                    <!-- Filter Chips & Search Info -->
+                    <div class="action-bar">
+                        <div class="filter-bar" id="filter-bar">
+                            <button class="filter-btn active" data-filter="all" onclick="filterClaims('all')">All</button>
+                            <button class="filter-btn" data-filter="Accident" onclick="filterClaims('Accident')">Accident</button>
+                            <button class="filter-btn" data-filter="Theft" onclick="filterClaims('Theft')">Theft</button>
+                            <button class="filter-btn" data-filter="APPROVE" onclick="filterClaims('APPROVE')">Approved</button>
+                            <button class="filter-btn" data-filter="REJECT" onclick="filterClaims('REJECT')">Rejected</button>
+                            <button class="filter-btn" data-filter="ESCALATE" onclick="filterClaims('ESCALATE')">Escalated</button>
+                            <button class="filter-btn" data-filter="REQUEST_INFORMATION" onclick="filterClaims('REQUEST_INFORMATION')">Info Needed</button>
+                            <button class="filter-btn" data-filter="PENDING" onclick="filterClaims('PENDING')">Pending</button>
+                        </div>
+                        <div class="claims-counter" id="claims-counter-text">Showing 0 claims</div>
+                    </div>
+
+                    <!-- Active Search Pill if Search Active -->
+                    <div id="active-search-bar" class="active-search-bar" style="display:none;">
+                        <span>Active Search: <strong id="active-search-term"></strong></span>
+                        <button class="btn-clear-search" onclick="clearSearch()">Clear Filter</button>
+                    </div>
+
+                    <!-- Claims Table -->
+                    <div class="table-container">
+                        <table class="claims-table" id="claims-table">
+                            <thead>
+                                <tr>
+                                    <th>Claim ID</th>
+                                    <th>Customer</th>
+                                    <th>Vehicle Registration</th>
+                                    <th>Incident Type</th>
+                                    <th>Incident Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="claims-tbody"></tbody>
+                        </table>
+                        <div class="empty-state" id="empty-state" style="display:none;">
+                            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            <p id="empty-state-message">No matching claims found. Try adjusting your search or filters.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 3: INSIGHTS -->
+                <section id="view-insights" class="view" style="display:none;">
+                    <!-- Insights KPI Row -->
+                    <div class="insights-kpi-grid" id="insights-kpi-grid"></div>
+
+                    <!-- In-depth Charts -->
+                    <div class="charts-grid">
+                        <div class="chart-card">
+                            <div class="card-header-flex">
+                                <h3>Vehicle Type Distribution</h3>
+                                <span class="card-badge">Fleet Risk</span>
+                            </div>
+                            <canvas id="chart-vehicles"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <div class="card-header-flex">
+                                <h3>Investigation Outcome Ratios</h3>
+                                <span class="card-badge">Compliance</span>
+                            </div>
+                            <canvas id="chart-insights-outcomes"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Policy Audit & Rule Insights -->
+                    <div class="insights-section">
+                        <div class="dashboard-section-header">
+                            <div>
+                                <h3 class="section-title">Automated Policy & Evidence Rule Checks</h3>
+                                <p class="section-desc">Key insurance verification clauses and rule trigger rates across claims</p>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="claims-table insights-table">
+                                <thead>
+                                    <tr>
+                                        <th>Policy Clause</th>
+                                        <th>Rule Description</th>
+                                        <th>Coverage Domain</th>
+                                        <th>Evaluation Method</th>
+                                        <th>Audit Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>SECTION_1_COVERAGE</strong></td>
+                                        <td>Vehicle accidental damage & natural loss indemnification</td>
+                                        <td>Accident / Own Damage</td>
+                                        <td>Repair Estimate vs IDV Check</td>
+                                        <td><span class="tag tag-approve">ACTIVE ENFORCED</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SECTION_1_THEFT</strong></td>
+                                        <td>Total loss theft settlement at full IDV after 2 keys / FIR</td>
+                                        <td>Theft / Total Loss</td>
+                                        <td>FIR Verification & Keys Cross-Check</td>
+                                        <td><span class="tag tag-approve">ACTIVE ENFORCED</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>CLAUSE_WINDOW_48H</strong></td>
+                                        <td>Mandatory intimation within 48 hours of accident event</td>
+                                        <td>Claim Window</td>
+                                        <td>Incident Date vs Claim Intimation Date</td>
+                                        <td><span class="tag tag-escalate">FLAGGED ON BREACH</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>CLAUSE_WINDOW_24H_THEFT</strong></td>
+                                        <td>Immediate FIR within 24 hours of theft discovery</td>
+                                        <td>Claim Window</td>
+                                        <td>Incident Date vs FIR Date</td>
+                                        <td><span class="tag tag-escalate">FLAGGED ON BREACH</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>EXCLUSION_COMMERCIAL</strong></td>
+                                        <td>Unauthorised commercial hire or carriage on private policy</td>
+                                        <td>Policy Exclusions</td>
+                                        <td>FIR / Incident Statement NLP Parsing</td>
+                                        <td><span class="tag tag-reject">AUTOMATIC REJECTION</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>EXCLUSION_INTOXICATION</strong></td>
+                                        <td>Driving under influence of intoxicating liquor or drugs</td>
+                                        <td>Policy Exclusions</td>
+                                        <td>MLC / FIR Police Notes Cross-Examination</td>
+                                        <td><span class="tag tag-reject">AUTOMATIC REJECTION</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>CROSS_DOC_INTEGRITY</strong></td>
+                                        <td>Consistency of vehicle reg, date, location across form and FIR</td>
+                                        <td>Evidence Grounding</td>
+                                        <td>Fuzzy Matrix & Timeline Consistency Engine</td>
+                                        <td><span class="tag tag-escalate">ESCALATE TO INVESTIGATOR</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW: ML RISK ENGINE -->
+                <section id="view-ml" class="view" style="display:none;">
+                    <!-- Hero Banner -->
+                    <div class="ml-hero-card">
+                        <div class="ml-hero-left">
+                            <h3>⚡ Kaggle Vehicle Insurance ML Risk Engine</h3>
+                            <p>Trained on <strong>508,499 real-world motor insurance records</strong> (<code style="background:rgba(255,255,255,0.15); padding:2px 6px; border-radius:4px;">imtkaggleteam/vehicle-insurance-data</code>). Leverages LightGBM Gradient Boosted Trees for sub-millisecond fraud probability scoring, severity benchmark auditing, and claim anomaly identification.</p>
+                        </div>
+                        <div class="ml-accuracy-badge-box">
+                            <div class="ml-accuracy-val" id="ml-stat-acc">91.38%</div>
+                            <div class="ml-accuracy-label">Model Accuracy</div>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Grid -->
+                    <div class="ml-metrics-grid">
+                        <div class="ml-metric-card">
+                            <div class="ml-metric-title">ROC-AUC Score</div>
+                            <div class="ml-metric-value" id="ml-stat-auc" style="color:var(--accent);">0.743</div>
+                            <div class="ml-metric-sub">Distinguishes normal vs high-risk claims</div>
+                        </div>
+                        <div class="ml-metric-card">
+                            <div class="ml-metric-title">Precision</div>
+                            <div class="ml-metric-value" id="ml-stat-prec" style="color:var(--cyan);">33.8%</div>
+                            <div class="ml-metric-sub">On imbalanced risk class</div>
+                        </div>
+                        <div class="ml-metric-card">
+                            <div class="ml-metric-title">Dataset Size</div>
+                            <div class="ml-metric-value" style="color:var(--text-primary);">508,499</div>
+                            <div class="ml-metric-sub">150,000 active training records</div>
+                        </div>
+                        <div class="ml-metric-card">
+                            <div class="ml-metric-title">Inference Speed</div>
+                            <div class="ml-metric-value" style="color:var(--green);">< 3ms</div>
+                            <div class="ml-metric-sub">LightGBM optimized pipeline</div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive ML Predictor & Confusion Matrix -->
+                    <div class="ml-interactive-grid">
+                        <!-- Left: Live Predictor -->
+                        <div class="ml-card">
+                            <div class="ml-card-title">
+                                <span>🎯 Live Claim Risk & Anomaly Predictor</span>
+                                <span class="tag tag-approve">REAL-TIME INFERENCE</span>
+                            </div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">
+                                Simulate vehicle claim risk against the 508k-record Kaggle benchmark model.
+                            </p>
+
+                            <div class="form-presets" style="margin-bottom:14px;">
+                                <span class="preset-label">Test Presets:</span>
+                                <button type="button" class="preset-chip" onclick="fillMLPreset('clean')">🟢 Low Risk Sedan</button>
+                                <button type="button" class="preset-chip" onclick="fillMLPreset('inflated')">🟠 Inflated Repair Van</button>
+                                <button type="button" class="preset-chip" onclick="fillMLPreset('highrisk')">🔴 High-Risk Sport Bike</button>
+                            </div>
+
+                            <form id="ml-predict-form" onsubmit="runMLPrediction(event)">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label class="form-label">Vehicle Type</label>
+                                        <select id="ml-input-vtype" class="form-select">
+                                            <option value="Pick-up / Delivery Van">Pick-up / Delivery Van</option>
+                                            <option value="Car / Sedan">Car / Sedan</option>
+                                            <option value="Motor-cycle">Motor-cycle / Two-Wheeler</option>
+                                            <option value="Truck">Truck / Heavy Vehicle</option>
+                                            <option value="Bus">Bus / Commercial Carriage</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Vehicle Usage</label>
+                                        <select id="ml-input-usage" class="form-select">
+                                            <option value="Private">Private Use</option>
+                                            <option value="Commercial">Commercial / Hire</option>
+                                            <option value="Own Goods">Own Goods Delivery</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Insured Declared Value (IDV ₹)</label>
+                                        <input type="number" id="ml-input-idv" class="form-input" value="650000" min="20000" max="10000000" step="10000" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Repair Estimate Claimed (₹)</label>
+                                        <input type="number" id="ml-input-repair" class="form-input" value="180000" min="0" max="5000000" step="5000" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Vehicle Manufacturing Year</label>
+                                        <input type="number" id="ml-input-year" class="form-input" value="2021" min="1990" max="2026" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Annual Premium Paid (₹)</label>
+                                        <input type="number" id="ml-input-premium" class="form-input" value="18500" min="1000" max="200000" step="500" required>
+                                    </div>
+                                </div>
+                                <div style="margin-top:18px;">
+                                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                                        ⚡ Evaluate Claim with LightGBM Model
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Prediction Result Box -->
+                            <div id="ml-prediction-result" class="prediction-result-box" style="display:none;"></div>
+                        </div>
+
+                        <!-- Right: Confusion Matrix & Feature Importances -->
+                        <div>
+                            <div class="ml-card" style="margin-bottom:20px;">
+                                <div class="ml-card-title">
+                                    <span>📊 Model Confusion Matrix</span>
+                                    <span class="card-badge">Test Split (30,000)</span>
+                                </div>
+                                <table class="confusion-matrix-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Actual \ Pred</th>
+                                            <th>Predicted Normal</th>
+                                            <th>Predicted Claim/Risk</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Actual Normal</th>
+                                            <td class="cm-cell-tn">27,344<br><small>(True Negative)</small></td>
+                                            <td class="cm-cell-fp">424<br><small>(False Positive)</small></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Actual Claim</th>
+                                            <td class="cm-cell-fn">2,160<br><small>(False Negative)</small></td>
+                                            <td class="cm-cell-tp">72<br><small>(True Positive)</small></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px;">
+                                    * High TN rate ensures genuine motor policyholders avoid unwarranted investigation delays, while anomaly heuristics flag out-of-distribution repair invoices.
+                                </p>
+                            </div>
+
+                            <div class="ml-card">
+                                <div class="ml-card-title">
+                                    <span>🏆 Top Model Predictors</span>
+                                    <span class="card-badge">Feature Importance</span>
+                                </div>
+                                <div style="display:flex; flex-direction:column; gap:10px; margin-top:12px;">
+                                    <div>
+                                        <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:600; margin-bottom:4px;">
+                                            <span>Insured Declared Value (IDV)</span>
+                                            <span>24.8%</span>
+                                        </div>
+                                        <div class="risk-meter" style="margin:0;"><div class="risk-meter-fill" style="width:24.8%; background:#4f46e5;"></div></div>
+                                    </div>
+                                    <div>
+                                        <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:600; margin-bottom:4px;">
+                                            <span>Premium-to-IDV Ratio</span>
+                                            <span>21.3%</span>
+                                        </div>
+                                        <div class="risk-meter" style="margin:0;"><div class="risk-meter-fill" style="width:21.3%; background:#0891b2;"></div></div>
+                                    </div>
+                                    <div>
+                                        <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:600; margin-bottom:4px;">
+                                            <span>Vehicle Age (Prod Year)</span>
+                                            <span>18.6%</span>
+                                        </div>
+                                        <div class="risk-meter" style="margin:0;"><div class="risk-meter-fill" style="width:18.6%; background:#16a34a;"></div></div>
+                                    </div>
+                                    <div>
+                                        <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:600; margin-bottom:4px;">
+                                            <span>Engine CCM / Tonnage</span>
+                                            <span>14.2%</span>
+                                        </div>
+                                        <div class="risk-meter" style="margin:0;"><div class="risk-meter-fill" style="width:14.2%; background:#d97706;"></div></div>
+                                    </div>
+                                    <div>
+                                        <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:600; margin-bottom:4px;">
+                                            <span>Vehicle Type & Usage</span>
+                                            <span>11.5%</span>
+                                        </div>
+                                        <div class="risk-meter" style="margin:0;"><div class="risk-meter-fill" style="width:11.5%; background:#9333ea;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 6: PDF & DOCUMENT AI STUDIO -->
+                <section id="view-doc-studio" class="view" style="display:none;">
+                    <!-- Studio Banner -->
+                    <div class="studio-banner">
+                        <div class="studio-badge">
+                            <span>⚡</span> REAL-WORLD MOTOR EVIDENCE PARSER
+                        </div>
+                        <h2 class="studio-title">PDF & Document AI Studio</h2>
+                        <p class="studio-desc">
+                            Ingest real-world motor claim PDFs, garage repair estimates, police FIRs, and customer incident letters.
+                            The AI model parses multi-page layouts, classifies document types, extracts Indian vehicle registrations, dates,
+                            itemized repair parts, verifies invoice math consistency, and can automatically create new claim cases with 1-click evidence review.
+                        </p>
+                    </div>
+
+                    <!-- Studio Grid: Upload Zone & Sample Document Browser -->
+                    <div class="studio-grid">
+                        <!-- Left: Upload Card -->
+                        <div class="studio-card">
+                            <div class="studio-card-header">
+                                <div class="studio-card-title">
+                                    <span>📤 Upload Real-World Document</span>
+                                </div>
+                                <span class="card-badge">PDF / DOCX / TXT</span>
+                            </div>
+
+                            <div class="upload-dropzone" id="studio-dropzone" onclick="document.getElementById('studio-file-input').click()" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleFileDrop(event)">
+                                <input type="file" id="studio-file-input" style="display:none;" accept=".pdf,.docx,.txt,.csv,.json" onchange="handleStudioFileSelect(event)">
+                                <div class="upload-icon-circle">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                </div>
+                                <div class="upload-main-text">Drag & Drop Claim PDF or Browse</div>
+                                <div class="upload-sub-text">Automatic PyMuPDF layout parsing and Indian motor claim entity extraction</div>
+                                <div class="format-pills">
+                                    <span class="format-pill">PDF Document</span>
+                                    <span class="format-pill">Word (.docx)</span>
+                                    <span class="format-pill">Text (.txt)</span>
+                                    <span class="format-pill">CSV / JSON</span>
+                                </div>
+                            </div>
+
+                            <div style="margin-top:14px; display:flex; gap:10px; align-items:center;">
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('studio-file-input').click()" style="width:100%; justify-content:center;">
+                                    📁 Select File from Computer
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right: Pre-Loaded Sample Real-World PDFs -->
+                        <div class="studio-card">
+                            <div class="studio-card-header">
+                                <div class="studio-card-title">
+                                    <span>⚡ Instant Test With Real-World PDFs</span>
+                                </div>
+                                <span class="card-badge" style="background:#10b981; color:#fff;">4 Ready Samples</span>
+                            </div>
+                            <p style="font-size:0.83rem; color:var(--text-muted); margin-bottom:12px;">
+                                Click any pre-packaged real motor claim PDF to test AI model parsing and entity extraction instantly:
+                            </p>
+
+                            <div class="sample-list" id="sample-docs-list">
+                                <div class="sample-item-card" onclick="scanSampleFile('Accident_Claim_Form_KA01MJ9082.pdf')">
+                                    <div class="sample-item-left">
+                                        <div class="sample-pdf-icon">PDF</div>
+                                        <div>
+                                            <div class="sample-item-title">Accident Claim Form (KA01MJ9082)</div>
+                                            <div class="sample-item-desc">Private Car Honda City • Frontal collision intimation</div>
+                                        </div>
+                                    </div>
+                                    <button class="sample-scan-btn">Scan & Extract →</button>
+                                </div>
+
+                                <div class="sample-item-card" onclick="scanSampleFile('Authorized_Garage_Repair_Estimate_KA01MJ9082.pdf')">
+                                    <div class="sample-item-left">
+                                        <div class="sample-pdf-icon">PDF</div>
+                                        <div>
+                                            <div class="sample-item-title">Authorized Garage Estimate (KA01MJ9082)</div>
+                                            <div class="sample-item-desc">Prime Honda Workshop • Parts & labour breakdown (₹48,500)</div>
+                                        </div>
+                                    </div>
+                                    <button class="sample-scan-btn">Scan & Extract →</button>
+                                </div>
+
+                                <div class="sample-item-card" onclick="scanSampleFile('Police_FIR_Theft_MH01RB1289.pdf')">
+                                    <div class="sample-item-left">
+                                        <div class="sample-pdf-icon">PDF</div>
+                                        <div>
+                                            <div class="sample-item-title">State Police FIR — Theft (MH01RB1289)</div>
+                                            <div class="sample-item-desc">Mumbai Police Sec 379 IPC • Stolen Royal Enfield bike</div>
+                                        </div>
+                                    </div>
+                                    <button class="sample-scan-btn">Scan & Extract →</button>
+                                </div>
+
+                                <div class="sample-item-card" onclick="scanSampleFile('Inflated_Taxi_Overclaim_Estimate_DL01AZ9988.pdf')">
+                                    <div class="sample-item-left">
+                                        <div class="sample-pdf-icon" style="background:#fef3c7; color:#b45309;">PDF</div>
+                                        <div>
+                                            <div class="sample-item-title">Commercial Taxi Overclaim (DL01AZ9988)</div>
+                                            <div class="sample-item-desc">Yellow-board taxi policy exclusion & arithmetic anomaly</div>
+                                        </div>
+                                    </div>
+                                    <button class="sample-scan-btn">Scan & Extract →</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Extraction Result Area -->
+                    <div id="studio-extraction-result" style="display:none;"></div>
+                </section>
+
+                <!-- VIEW 6: CLAIM AI ASSISTANT -->
+                <section id="view-assistant" class="view" style="display:none;">
+                    <div class="assistant-container">
+                        <!-- Top Toolbar / Context Selector -->
+                        <div class="assistant-toolbar card">
+                            <div class="assistant-toolbar-left">
+                                <div class="assistant-avatar-badge">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path>
+                                        <path d="m4.93 10.93 1.41 1.41"></path>
+                                        <path d="M2 18h2"></path>
+                                        <path d="M20 18h2"></path>
+                                        <path d="m19.07 10.93-1.41 1.41"></path>
+                                        <path d="M22 22H2"></path>
+                                        <path d="m8 22 1-6h6l1 6"></path>
+                                        <circle cx="12" cy="13" r="5"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="assistant-title-row">
+                                        <span class="assistant-name">ClaimLens AI Copilot</span>
+                                        <span class="assistant-badge-model" id="assistant-model-indicator">⚡ Expert Insurance Engine</span>
+                                    </div>
+                                    <div class="assistant-subtitle">Context-grounded motor claims investigator assistant</div>
+                                </div>
+                            </div>
+                            <div class="assistant-toolbar-right">
+                                <div class="claim-selector-wrapper">
+                                    <label class="selector-label" for="assistant-claim-select">Target Claim Context:</label>
+                                    <select id="assistant-claim-select" class="form-select assistant-select" onchange="onAssistantClaimChanged()">
+                                        <option value="">🌐 All Claims & General Policy Knowledge</option>
+                                    </select>
+                                </div>
+                                <div class="assistant-toolbar-actions">
+                                    <button class="btn btn-sm btn-secondary" onclick="clearAssistantChat()" title="Reset conversation">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                                        Reset
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary" onclick="exportAssistantTranscript()" title="Download conversation log">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                        Export
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Claim Context Strip (shown when a claim is selected) -->
+                        <div id="assistant-context-strip" class="assistant-context-strip" style="display:none;">
+                            <div class="context-strip-content">
+                                <span class="context-chip id-chip" id="strip-claim-id">CLM001</span>
+                                <span class="context-chip" id="strip-customer">Ramesh Chandra</span>
+                                <span class="context-chip" id="strip-vehicle">MH02CB4491 • Car</span>
+                                <span class="context-chip" id="strip-incident">Accident</span>
+                                <span class="context-chip amount-chip" id="strip-estimate">Est: ₹85,000</span>
+                                <span class="context-badge" id="strip-status">PENDING</span>
+                            </div>
+                            <button class="btn btn-xs btn-ghost" onclick="viewClaimFromAssistant()" style="font-size:0.75rem; padding:4px 10px; color:var(--accent);">
+                                Open Full Case Evidence →
+                            </button>
+                        </div>
+
+                        <!-- Quick Suggestion Prompts -->
+                        <div class="assistant-suggestions-bar" id="assistant-suggestions-bar">
+                            <span class="suggestions-label">Suggested Inquiries:</span>
+                            <div class="suggestions-pills" id="assistant-suggestions-pills">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages Window -->
+                        <div class="assistant-messages-container" id="assistant-messages-container">
+                            <!-- Populated with messages -->
+                        </div>
+
+                        <!-- Input Dock -->
+                        <div class="assistant-input-dock card">
+                            <div class="input-actions-bar">
+                                <span class="dock-hint">💡 Ask about contradictions, policy exclusions, settlement calculation, or draft an RFI</span>
+                                <span class="dock-shortcut">Press <kbd>Enter</kbd> to send, <kbd>Shift+Enter</kbd> for newline</span>
+                            </div>
+                            <div class="input-box-row">
+                                <button type="button" class="voice-btn" id="assistant-voice-btn" onclick="toggleVoiceInput()" title="Speech-to-text dictation">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                                    </svg>
+                                </button>
+                                <textarea id="assistant-input-text" class="assistant-textarea" rows="1" placeholder="Ask Claim AI anything about this claim, evidence consistency, or insurance policy..." onkeydown="handleAssistantKeyDown(event)" oninput="autoResizeTextarea(this)"></textarea>
+                                <button type="button" class="btn btn-primary assistant-send-btn" id="assistant-send-btn" onclick="submitAssistantQuery()">
+                                    <span>Send</span>
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 5: CLAIM DETAIL -->
+                <section id="view-detail" class="view" style="display:none;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
+                        <button class="btn btn-ghost back-btn" onclick="goBackFromDetail()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                            Back to Claims
+                        </button>
+                        <div style="display:flex; gap:10px;">
+                            <button class="btn btn-primary" onclick="openAssistantWithClaim(currentClaimId)" style="background:linear-gradient(135deg, #6366f1, #8b5cf6); border:none; box-shadow:0 2px 8px rgba(99,102,241,0.3);">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><circle cx="12" cy="13" r="5"></circle></svg>
+                                Ask Claim AI Copilot
+                            </button>
+                            <button class="btn btn-secondary" onclick="openEditClaimModal()">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                Edit Case
+                            </button>
+                            <button class="btn btn-danger" onclick="confirmDeleteClaim()" style="background:#fee2e2; color:#dc2626; border-color:#fecaca;">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                                Delete Case
+                            </button>
+                        </div>
+                    </div>
+                    <div id="detail-content"></div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- MODAL 1: NEW CASE / CREATE CLAIM -->
+    <div id="modal-new-claim" class="modal-backdrop" style="display:none;">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    File New Motor Insurance Claim Case
+                </div>
+                <button class="modal-close-btn" onclick="closeNewClaimModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-presets">
+                    <span class="preset-label">Judge Quick-Fill:</span>
+                    <button type="button" class="preset-chip" onclick="fillNewClaimPreset('accident')">🚗 Frontal Crash (Car)</button>
+                    <button type="button" class="preset-chip" onclick="fillNewClaimPreset('theft')">🏍️ Stolen Bike (Two-Wheeler)</button>
+                    <button type="button" class="preset-chip" onclick="fillNewClaimPreset('commercial')">🚚 Commercial Van Incident</button>
+                </div>
+
+                <form id="new-claim-form" onsubmit="submitNewClaim(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Claimant / Policyholder Name *</label>
+                            <input type="text" id="new-customer-name" class="form-input" placeholder="e.g. Ramesh Chandra" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Vehicle Registration No. *</label>
+                            <input type="text" id="new-vehicle-reg" class="form-input" placeholder="e.g. MH-02-CB-4491" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Vehicle Type *</label>
+                            <select id="new-vehicle-type" class="form-select">
+                                <option value="Car">Car / Sedan / SUV</option>
+                                <option value="Two-Wheeler">Two-Wheeler / Motorcycle</option>
+                                <option value="Commercial">Commercial / Van</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Incident Type *</label>
+                            <select id="new-incident-type" class="form-select">
+                                <option value="Accident">Accident / Collision</option>
+                                <option value="Theft">Theft / Stolen Vehicle</option>
+                                <option value="Fire">Fire / Natural Peril</option>
+                                <option value="Third-Party">Third-Party Damage</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Incident Date *</label>
+                            <input type="date" id="new-incident-date" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Incident Time</label>
+                            <input type="time" id="new-incident-time" class="form-input" value="14:30">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Incident Location *</label>
+                            <input type="text" id="new-incident-location" class="form-input" placeholder="e.g. Western Express Highway, Mumbai" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Date Claim Intimated *</label>
+                            <input type="date" id="new-claim-date" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Insured Declared Value (IDV ₹) *</label>
+                            <input type="number" id="new-idv" class="form-input" placeholder="e.g. 550000" min="10000" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Repair Estimate Amount (₹)</label>
+                            <input type="number" id="new-repair-estimate" class="form-input" placeholder="e.g. 85000" min="0">
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Claimant Statement & Incident Description *</label>
+                            <textarea id="new-description" class="form-textarea" rows="3" placeholder="Describe the sequence of events, damages observed, and involvement of third parties..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="padding:16px 0 0 0; margin-top:16px;">
+                        <button type="button" class="btn btn-secondary" onclick="closeNewClaimModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="btn-create-submit">Create Claim & Load Case</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: EDIT CASE -->
+    <div id="modal-edit-claim" class="modal-backdrop" style="display:none;">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    Edit Claim Case Details
+                </div>
+                <button class="modal-close-btn" onclick="closeEditClaimModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="edit-claim-form" onsubmit="submitEditClaim(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Claim Status</label>
+                            <select id="edit-status" class="form-select">
+                                <option value="PENDING">PENDING (Awaiting Review)</option>
+                                <option value="APPROVE">APPROVE (Claim Accepted)</option>
+                                <option value="REJECT">REJECT (Policy Exclusion / Non-compliance)</option>
+                                <option value="ESCALATE">ESCALATE (Discrepancies / SIU)</option>
+                                <option value="REQUEST_INFORMATION">REQUEST_INFORMATION (Missing Documents)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Vehicle Registration</label>
+                            <input type="text" id="edit-vehicle-reg" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Insured Declared Value (IDV ₹)</label>
+                            <input type="number" id="edit-idv" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Repair Estimate (₹)</label>
+                            <input type="number" id="edit-repair-estimate" class="form-input">
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Incident Location</label>
+                            <input type="text" id="edit-incident-location" class="form-input">
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="padding:16px 0 0 0; margin-top:16px;">
+                        <button type="button" class="btn btn-secondary" onclick="closeEditClaimModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: UPLOAD DOCUMENT TO CLAIM -->
+    <div id="modal-upload-doc" class="modal-backdrop" style="display:none;">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                    Upload Document to Case Evidence
+                </div>
+                <button class="modal-close-btn" onclick="closeUploadDocModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="upload-doc-form" onsubmit="submitClaimDocUpload(event)">
+                    <div class="form-group" style="margin-bottom:14px;">
+                        <label class="form-label">Document Slot / Category</label>
+                        <select id="upload-doc-slot" class="form-select">
+                            <option value="">🤖 Auto-Detect with AI Model</option>
+                            <option value="claim_form">Claim Form</option>
+                            <option value="repair_estimate">Workshop Repair Estimate</option>
+                            <option value="fir">Police FIR Report</option>
+                            <option value="customer_statement">Customer Incident Statement</option>
+                            <option value="surveyor_report">Surveyor & Loss Report</option>
+                        </select>
+                    </div>
+                    <div class="upload-dropzone" style="padding:24px 16px; margin-bottom:14px;" onclick="document.getElementById('claim-doc-file-input').click()">
+                        <input type="file" id="claim-doc-file-input" style="display:none;" accept=".pdf,.docx,.txt,.csv" onchange="handleClaimDocFileChange(this)">
+                        <div class="upload-icon-circle" style="width:48px; height:48px; margin-bottom:10px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <div id="claim-doc-file-name" class="upload-main-text" style="font-size:0.95rem;">Select or Drag & Drop PDF / Document</div>
+                        <div class="upload-sub-text">Supported formats: PDF, DOCX, TXT</div>
+                    </div>
+                    <div class="modal-footer" style="padding:12px 0 0 0;">
+                        <button type="button" class="btn btn-secondary" onclick="closeUploadDocModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="btn-submit-upload-doc">Upload & Re-Evaluate Case</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- GLOBAL FLOATING AI ASSISTANT LAUNCHER -->
+    <button class="floating-ai-trigger" id="floating-ai-trigger" onclick="toggleFloatingAssistant()" title="Open Claim AI Copilot">
+        <div class="floating-ai-pulse"></div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+            <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path>
+            <path d="m4.93 10.93 1.41 1.41"></path>
+            <path d="M2 18h2"></path>
+            <path d="M20 18h2"></path>
+            <path d="m19.07 10.93-1.41 1.41"></path>
+            <path d="M22 22H2"></path>
+            <path d="m8 22 1-6h6l1 6"></path>
+            <circle cx="12" cy="13" r="5"></circle>
+        </svg>
+        <span class="floating-ai-label">Ask Copilot</span>
+    </button>
+
+    <!-- GLOBAL FLOATING AI DRAWER -->
+    <div class="floating-ai-drawer" id="floating-ai-drawer" style="display:none;">
+        <div class="drawer-header">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div class="drawer-icon-badge">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+                        <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path>
+                        <circle cx="12" cy="13" r="5"></circle>
+                    </svg>
+                </div>
+                <div>
+                    <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary); line-height:1.2;">ClaimLens AI Copilot</div>
+                    <div style="font-size:0.75rem; color:var(--text-secondary);" id="drawer-context-label">Context: All Claims</div>
+                </div>
+            </div>
+            <div style="display:flex; gap:6px;">
+                <button class="btn-drawer-action" onclick="expandAssistantToFullScreen()" title="Expand to Full View">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                </button>
+                <button class="btn-drawer-close" onclick="toggleFloatingAssistant()" title="Close">&times;</button>
+            </div>
+        </div>
+        <div class="drawer-body" id="drawer-messages-container"></div>
+        <div class="drawer-suggestions" id="drawer-suggestions-pills"></div>
+        <div class="drawer-input-row">
+            <input type="text" id="drawer-input-text" class="form-input drawer-input" placeholder="Ask AI about this claim or policy..." onkeydown="handleDrawerKeyDown(event)">
+            <button class="btn btn-primary btn-sm" onclick="submitDrawerQuery()">Send</button>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay" style="display:none;">
+
+        <div class="loading-spinner"></div>
+        <p id="loading-text">Processing evidence...</p>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="/app.js"></script>
+</body>
+</html>

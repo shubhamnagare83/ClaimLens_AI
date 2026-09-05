@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM003
+Policy Number: POL-2026-003
+
+Policyholder Details:
+Name: Isha Deshmukh
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Vehicle No.: MH20JT7587
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 13/07/2026
+Time: 20:45
+Location: Residential colony internal road, Nanded
+
+Description:
+On the day of the incident, I was driving my two-wheeler near Residential colony internal road in Nanded. Another vehicle collided with mine, causing damage to the Fuel tank, Chain sprocket.
+
+Claim Date: 18/07/2026
+
+Declaration: I, Isha Deshmukh, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Isha Deshmukh
+Date: 18/07/2026

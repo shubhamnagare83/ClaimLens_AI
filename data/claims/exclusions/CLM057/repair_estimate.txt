@@ -1,0 +1,19 @@
+REPAIR ESTIMATE
+========================================
+
+Vehicle Registration: MH31FA9642
+Vehicle: Hero Splendor
+Date of Assessment: 08 Jun 2026
+
+Estimated Repair Cost:
+------------------------------
+  Footrest: Rs. 12,000
+  Handle bar: Rs. 25,000
+  Rear view mirror: Rs. 5,000
+------------------------------
+  Total Estimate: Rs. 42,000
+
+Note: This is an estimate. Actual cost may vary upon disassembly.
+
+Authorized Workshop
+Date: 08 Jun 2026

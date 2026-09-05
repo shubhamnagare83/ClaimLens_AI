@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM040
+Policy Number: POL-2026-040
+
+Policyholder Details:
+Name: Pranav Pawar
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle Registration: MH04BC4749
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 06 March 2026
+Incident Time: 13:00
+Location: IT Park access road, Akola
+
+Description:
+On the day of the incident, I was driving my car near IT Park access road in Akola. Another vehicle collided with mine, causing damage to the Bonnet, Headlight.
+
+Claim Date: 09 March 2026
+
+Declaration: I, Pranav Pawar, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Pranav Pawar
+Date: 09 March 2026

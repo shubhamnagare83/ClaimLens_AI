@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM015
+Policy Number: POL-2026-015
+
+Policyholder Details:
+Name: Sneha Das
+
+Vehicle Details:
+Vehicle Type: Private Car
+Reg No: MH02CR6112
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 2026-08-21
+Time: 20:15
+Location: Bus stand approach road, Thane
+
+Description:
+On the day of the incident, I was driving my car near Bus stand approach road in Thane. Another vehicle collided with mine, causing damage to the Boot lid, Side mirror.
+
+Claim Date: 2026-08-23
+
+Declaration: I, Sneha Das, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Sneha Das
+Date: 2026-08-23

@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM004
+Policy Number: POL-2026-004
+
+Policyholder Details:
+Name: Kabir Shah
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration Number: MH15FP8850
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 16 Jun 2026
+Incident Time: 12:15
+Location: Temple Road curve, Ahmednagar
+
+Description:
+On the day of the incident, I was driving my car near Temple Road curve in Ahmednagar. Another vehicle collided with mine, causing damage to the Headlight, Right fender.
+
+Claim Date: 19 Jun 2026
+
+Declaration: I, Kabir Shah, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Kabir Shah
+Date: 19 Jun 2026

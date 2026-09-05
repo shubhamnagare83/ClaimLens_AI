@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM062
+Policy Number: POL-2026-062
+
+Policyholder Details:
+Name: Pankaj Singh
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle Registration: MH20YL5700
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 2026-06-04
+Approx. Time: 21:30
+Location: IT Park access road, Aurangabad
+
+Description:
+On the day of the incident, I was driving my car near IT Park access road in Aurangabad. Another vehicle collided with mine, causing damage to the Right door, Side mirror.
+
+Claim Date: 2026-06-07
+
+Declaration: I, Pankaj Singh, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Pankaj Singh
+Date: 2026-06-07

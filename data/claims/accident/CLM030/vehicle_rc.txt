@@ -1,0 +1,14 @@
+REGISTRATION CERTIFICATE
+========================================
+
+Vehicle Registration: MH20DE1024
+Owner Name: Rahul Thakur
+Vehicle Class: Motor Car
+Make/Model: MG Hector
+Fuel Type: Petrol
+Registration Date: 24/03/2023
+Registering Authority: RTO MH20
+
+Fitness Valid Till: 20/03/2038
+
+This is a computer-generated document.

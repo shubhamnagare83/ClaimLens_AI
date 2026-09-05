@@ -1,0 +1,169 @@
+CLAIMLENS MOTOR SECURE POLICY
+=============================
+Policy ID: CMSP-2026
+Version: 2026.1
+Effective: 01 January 2026
+Issuer: ClaimLens Insurance Ltd.
+
+SECTION 1: ELIGIBILITY
+
+POL-001 — Policy Validity
+Coverage applies only when the incident occurs during the active policy period.
+The policy start date and end date define the coverage window.
+Any incident occurring before the policy start date or after the policy end date is not covered.
+
+POL-007 — Vehicle Registration Requirement
+The insured vehicle must have a valid registration certificate (RC) issued by the Regional Transport Office.
+The registration number on the policy must match the vehicle registration number on all submitted documents.
+
+POL-008 — Valid Driving Licence
+At the time of an accident, the insured vehicle must be driven by a person holding a valid and effective
+driving licence appropriate for the type of vehicle. A car requires a Light Motor Vehicle (LMV) licence.
+A two-wheeler requires a two-wheeler licence or LMV licence.
+
+POL-020 — Vehicle Ownership Verification
+The claimant must be the registered owner of the insured vehicle or an authorized representative.
+The name on the policy must match the name on the vehicle registration certificate.
+
+POL-021 — Policy Transfer
+If the vehicle has been transferred to a new owner, the insurance policy must also be transferred
+within 14 days of the vehicle transfer. Claims made by a new owner without policy transfer will not be covered.
+
+
+SECTION 2: COVERAGE
+
+POL-002 — Own Damage Coverage
+Own damage coverage provides compensation for damage to the insured vehicle caused by accidents,
+collisions, overturning, fire, explosion, natural calamities, or malicious acts by third parties.
+The claim amount is subject to the Insured Declared Value (IDV) and applicable deductibles.
+
+POL-003 — Theft Coverage
+Theft coverage provides compensation for the loss of the insured vehicle due to theft or attempted theft.
+The insured must file a First Information Report (FIR) with the police within 24 hours of discovering the theft.
+Coverage is limited to the Insured Declared Value (IDV) at the time of theft.
+
+POL-004 — Accident Coverage
+Accident coverage compensates for damage to the insured vehicle resulting from road accidents,
+collisions with other vehicles, objects, or animals, and single-vehicle accidents such as overturning.
+
+POL-022 — Geographic Coverage
+The policy provides coverage within the geographical boundaries of India.
+Incidents occurring outside India are not covered unless specifically endorsed.
+
+
+SECTION 3: CLAIM WINDOW
+
+POL-005 — Claim Notification Window
+Claims should normally be reported to the insurer within 7 calendar days of the incident date.
+Reasonable delay may be considered when supported by evidence such as hospitalization,
+remote location, or other justifiable circumstances.
+
+POL-030 — Reasonable Delay Exception
+If the claim is reported beyond the standard 7-day window, the insurer may still consider the claim
+if the policyholder provides reasonable justification for the delay.
+
+
+SECTION 4: DOCUMENTATION
+
+POL-006 — Required Claim Documents
+Every claim submission must include a duly completed claim form.
+For accident claims: incident description and repair estimate.
+For theft claims: FIR, vehicle registration certificate, and key declaration.
+
+POL-016 — Theft FIR Requirement
+For theft claims, a First Information Report (FIR) filed with the local police is mandatory.
+The FIR must be filed within 24 hours of discovering the theft.
+Claims without an FIR will not be processed.
+
+POL-017 — Theft Key Requirement
+For theft claims, the policyholder must submit all sets of vehicle keys to the insurer
+along with a signed key declaration.
+
+POL-018 — Repair Estimate Requirement
+For accident and own damage claims, a detailed repair estimate from an authorized workshop is required.
+
+POL-019 — Repair Invoice Requirement
+After repairs are completed, the policyholder must submit the final repair invoice for reimbursement.
+
+POL-023 — Accident Evidence Requirements
+For accident claims, the policyholder must provide a detailed description of the accident
+including date, time, location, circumstances, and parties involved.
+
+POL-024 — Theft Reporting Requirements
+Theft must be reported to the police immediately and to the insurer within the claim notification window.
+
+POL-025 — Police Acknowledgement
+For incidents involving third parties, significant property damage, or injuries,
+a police report or acknowledgement may be required.
+
+POL-033 — Documentation Accuracy
+All submitted documents must be consistent with each other and with the facts of the incident.
+Material inconsistencies between documents may require clarification or investigation.
+
+
+SECTION 5: EXCLUSIONS
+
+POL-009 — Driving Licence Exclusion
+No coverage if the vehicle was being driven by a person not holding a valid and effective driving licence.
+
+POL-010 — Alcohol and Substance Exclusion
+No coverage if the driver was under the influence of alcohol or any intoxicating substance.
+
+POL-011 — Intentional Damage Exclusion
+No coverage for loss or damage caused intentionally by the insured.
+
+POL-012 — Wear and Tear Exclusion
+No coverage for damage resulting from normal wear and tear, gradual deterioration, rust, or corrosion.
+
+POL-013 — Mechanical or Electrical Breakdown
+No coverage for loss due to mechanical or electrical breakdown unless directly caused by an accident.
+
+POL-032 — Misrepresentation
+If any claim is found to be based on misrepresentation or fraudulent documentation,
+the insurer reserves the right to deny the claim.
+
+POL-036 — Commercial Use Exclusion
+If the insured vehicle is registered as private but was being used for commercial purposes,
+coverage may be denied.
+
+POL-038 — Modification Exclusion
+Damage to or caused by unauthorized modifications not declared in the policy are excluded.
+
+
+SECTION 6: VALUATION
+
+POL-014 — Insured Declared Value (IDV)
+The IDV represents the maximum sum insured for the vehicle.
+The total claim amount cannot exceed the IDV.
+
+POL-015 — Deductible
+A compulsory deductible applies to every claim.
+Cars: Rs. 2,000. Two-wheelers: Rs. 1,000.
+
+POL-026 — Total Loss Assessment
+If the cost of repair exceeds 75% of the IDV, the vehicle may be declared a total loss.
+
+POL-027 — Partial Loss Assessment
+For partial loss, the insurer will pay repair costs subject to depreciation, deductible, and IDV limits.
+
+POL-028 — Salvage Rights
+In case of total loss or theft recovery, the insurer has the right to take possession of the salvage.
+
+POL-029 — Depreciation Schedule
+Depreciation is applied to replaced parts based on vehicle age.
+Rubber, nylon, plastic: 50%. Fiberglass: 30%. Glass: nil. Paint: 50%.
+
+
+SECTION 7: PROCESS
+
+POL-031 — Claim Investigation Rights
+The insurer reserves the right to investigate any claim through appointed surveyors or investigators.
+
+POL-034 — Human Review Requirement
+All claim recommendations are advisory. Final decisions must be made by authorized human investigators.
+
+POL-035 — Dispute Resolution
+In case of dispute, the policyholder may request re-evaluation within 30 days.
+
+POL-037 — Multiple Claims
+Cumulative claim amount across all claims cannot exceed the IDV.

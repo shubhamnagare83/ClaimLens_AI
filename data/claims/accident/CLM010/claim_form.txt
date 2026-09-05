@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM010
+Policy Number: POL-2026-010
+
+Policyholder Details:
+Name: Siddharth Patel
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration: MH20BZ2844
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 28-07-2026
+Time of Incident: 17:45
+Location: Highway NH-48 km marker 120, Nagpur
+
+Description:
+On the day of the incident, I was driving my car near Highway NH-48 km marker 120 in Nagpur. Another vehicle collided with mine, causing damage to the Left door, Right door.
+
+Claim Date: 29-07-2026
+
+Declaration: I, Siddharth Patel, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Siddharth Patel
+Date: 29-07-2026

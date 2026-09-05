@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM012
+Policy Number: POL-2026-012
+
+Policyholder Details:
+Name: Aditya Singh
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Reg No: MH05LG7139
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 12 July 2026
+Time of Incident: 17:45
+Location: Residential colony internal road, Akola
+
+Description:
+On the day of the incident, I was driving my two-wheeler near Residential colony internal road in Akola. Another vehicle collided with mine, causing damage to the Handle bar, Mudguard.
+
+Claim Date: 16 July 2026
+
+Declaration: I, Aditya Singh, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Aditya Singh
+Date: 16 July 2026

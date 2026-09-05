@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM079
+Policy Number: POL-2026-079
+
+Policyholder Details:
+Name: Veena Sinha
+
+Vehicle Details:
+Vehicle Type: Private Car
+Vehicle Registration: MH15QS6534
+
+Incident Details:
+Type of Incident: Accident
+Date of Incident: 2026-07-15
+Time of Incident: 11:15
+Location: State Highway near village crossing, Ahmednagar
+
+Description:
+Major accident on 15 July 2026 involving my vehicle MH15QS6534 at State Highway near village crossing, Ahmednagar. The vehicle sustained extensive damage.
+
+Claim Date: 2026-07-18
+
+Declaration: I, Veena Sinha, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Veena Sinha
+Date: 2026-07-18

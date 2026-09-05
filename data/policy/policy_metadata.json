@@ -1,0 +1,15 @@
+{
+  "policy_id": "CMSP-2026",
+  "policy_name": "ClaimLens Motor Secure Policy",
+  "version": "2026.1",
+  "effective_date": "2026-01-01",
+  "issuer": "ClaimLens Insurance Ltd.",
+  "total_clauses": 38,
+  "categories": ["eligibility", "coverage", "exclusion", "valuation", "documentation", "claim_window", "process"],
+  "vehicle_types_covered": ["Car", "Two-Wheeler"],
+  "geographical_coverage": "India",
+  "compulsory_deductible_car": 2000,
+  "compulsory_deductible_two_wheeler": 1000,
+  "claim_window_days": 7,
+  "total_loss_threshold_percent": 75
+}

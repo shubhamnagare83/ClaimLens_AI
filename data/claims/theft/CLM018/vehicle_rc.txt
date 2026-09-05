@@ -1,0 +1,14 @@
+REGISTRATION CERTIFICATE
+========================================
+
+Registration: MH03LH8593
+Owner Name: Raj Pillai
+Vehicle Class: Motor Car
+Make/Model: Toyota Innova
+Fuel Type: Petrol
+Registration Date: 2023-10-01
+Registering Authority: RTO MH03
+
+Fitness Valid Till: 2038-09-27
+
+This is a computer-generated document.

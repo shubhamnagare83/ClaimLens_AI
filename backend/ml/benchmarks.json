@@ -1,0 +1,43 @@
+{
+  "avg_payout_overall": 30517.2,
+  "p75_payout_overall": 103790.67,
+  "payout_by_vehicle_type": {
+    "Automobile": 22683.55,
+    "Bus": 26944.86,
+    "Motor-cycle": 8161.0,
+    "Pick-up": 27709.5,
+    "Special construction": 35000.0,
+    "Station Wagones": 26777.0,
+    "Tanker": 64000.0,
+    "Tractor": 7417.5,
+    "Trailers and semitrailers": 100528.1,
+    "Truck": 73700.0
+  },
+  "payout_by_usage": {
+    "Agricultural Any Farm": 14124.59,
+    "Agricultural Own Farm": 5709.43,
+    "Ambulance": 33000.0,
+    "Car Hires": 26122.83,
+    "Fare Paying Passengers": 27827.35,
+    "General Cartage": 122187.9,
+    "Learnes": 34324.56,
+    "Others": 8000.0,
+    "Own Goods": 30400.0,
+    "Own service": 29051.74,
+    "Private": 24533.02,
+    "Special Construction": 16500.0,
+    "Taxi": 12767.44
+  },
+  "claim_rate_by_vehicle_type": {
+    "Automobile": 7.91,
+    "Bus": 11.84,
+    "Motor-cycle": 0.71,
+    "Pick-up": 8.84,
+    "Special construction": 8.56,
+    "Station Wagones": 11.82,
+    "Tanker": 4.26,
+    "Tractor": 1.34,
+    "Trailers and semitrailers": 5.94,
+    "Truck": 8.07
+  }
+}

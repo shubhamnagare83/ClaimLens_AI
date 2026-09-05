@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLM058",
+  "expected_outcome": "REJECT",
+  "expected_contradictions": [],
+  "expected_missing_documents": [],
+  "expected_policy_clauses": [
+    "POL-011"
+  ],
+  "expected_blocking_conditions": [
+    "intentional_damage"
+  ],
+  "scenario_type": "EXCLUSION",
+  "difficulty": "Hard"
+}

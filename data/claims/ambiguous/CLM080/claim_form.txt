@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM080
+Policy Number: POL-2026-080
+
+Policyholder Details:
+Name: Aarav Thakur
+
+Vehicle Details:
+Vehicle Type: Two-Wheeler
+Registration: MH20QG7621
+
+Incident Details:
+Type of Incident: Theft
+Date of Incident: 24 July 2026
+Time of Incident: 10:45
+Location: Station Road intersection, Ahmednagar
+
+Description:
+There was an incident with my vehicle. I am not able to recall all the details clearly. It happened near Ahmednagar. My vehicle MH20QG7621 was damaged.
+
+Claim Date: 27 July 2026
+
+Declaration: I, Aarav Thakur, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Aarav Thakur
+Date: 27 July 2026

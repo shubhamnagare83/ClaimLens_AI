@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM055",
+  "expected_outcome": "ESCALATE",
+  "expected_contradictions": [
+    "vehicle_registration"
+  ],
+  "expected_missing_documents": [],
+  "expected_policy_clauses": [
+    "POL-007",
+    "POL-033"
+  ],
+  "expected_blocking_conditions": [],
+  "scenario_type": "CONTRADICTION",
+  "difficulty": "Hard"
+}

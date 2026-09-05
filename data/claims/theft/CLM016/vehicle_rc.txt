@@ -1,0 +1,14 @@
+REGISTRATION CERTIFICATE
+========================================
+
+Registration Number: MH15JE9931
+Owner Name: Manish Mishra
+Vehicle Class: Motor Car
+Make/Model: Hyundai i20
+Fuel Type: Petrol
+Registration Date: 2023-06-28
+Registering Authority: RTO MH15
+
+Fitness Valid Till: 2038-06-24
+
+This is a computer-generated document.

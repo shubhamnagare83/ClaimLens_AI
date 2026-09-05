@@ -1,0 +1,29 @@
+CLAIM FORM
+========================================
+
+Claim ID: CLM025
+Policy Number: POL-2026-025
+
+Policyholder Details:
+Name: Simran Banerjee
+
+Vehicle Details:
+Vehicle Type: Private Car
+Registration Number: MH49WU8486
+
+Incident Details:
+Type of Incident: Theft
+Date of Incident: 19 August 2026
+Incident Time: 23:30
+Location: Market area main chowk, Mumbai
+
+Description:
+I parked my car at Market area main chowk in Mumbai. When I returned, the vehicle was missing from the parking spot.
+
+Claim Date: 24 August 2026
+
+Declaration: I, Simran Banerjee, hereby declare that the information
+provided in this claim form is true and correct to the best of my knowledge.
+
+Signature: Simran Banerjee
+Date: 24 August 2026
